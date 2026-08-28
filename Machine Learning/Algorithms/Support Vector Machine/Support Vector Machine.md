@@ -1,7 +1,7 @@
 ---
 tags:
 ---
-##### [[Tìm siêu phẳng phân chia (Hyperplane) 1]]
+##### [[Tìm siêu phẳng phân chia (Hyperplane)]]
 Phương trình siêu phẳng:
 
 $$
@@ -12,7 +12,7 @@ Trong đó:
 - $x$: vector đặc trưng.
 - $b$: hệ số dịch chuyển.
 
-##### [[Tối đa hóa khoảng cách biên (Margin) 1]]
+##### [[Tối đa hóa khoảng cách biên (Margin)]]
 Margin là khoảng cách từ siêu phẳng đến các điểm dữ liệu gần nhất của mỗi lớp.
 
 $$
