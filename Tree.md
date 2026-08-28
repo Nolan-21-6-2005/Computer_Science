@@ -1,5 +1,0 @@
-- Heap is a tree data structure that is implemented using arrays and used to implement priority queues.
-- B-Tree and B+ Tree are used to implement indexing in:: [[databases]].
-- Syntax Tree helps in scanning, parsing, generation of code, and evaluation of arithmetic expressions in Compiler design.
-- Spanning trees are used in routers in computer networks.
-- Domain Name Server also uses a tree data structure.
