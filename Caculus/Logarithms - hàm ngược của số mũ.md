@@ -1,6 +1,37 @@
-# Từ Likelihood đến Log-Likelihood
+## Mục đích sử dụng
+Logarithm được dùng vì **nó biến phép nhân thành phép cộng**, đồng thời nén các giá trị rất lớn hoặc rất nhỏ về một thang đo dễ xử lý hơn.
 
-## 1. Hàm Likelihood
+- Nếu $2^5$ thì $\log_2(32) =5$
+
+Biến phép nhân thành phép cộng:
+$$\log(ab) = \log(a) + \log(b)$$
+### 1. Log của tích
+
+$$
+\log(ab)=\log a+\log b
+$$
+
+Giúp chuyển:
+
+$$
+\prod_{i=1}^{N}(\cdot)
+\quad\Longrightarrow\quad
+\sum_{i=1}^{N}\log(\cdot)
+$$
+
+---
+
+### 2. Log của lũy thừa
+
+$$
+\log(a^b)=b\log a
+$$
+
+Giúp đưa số mũ ra ngoài dấu log.
+
+## Từ Likelihood đến Log-Likelihood
+
+### 1. Hàm Likelihood
 
 Đối với Logistic Regression, hàm likelihood là:
 
@@ -15,7 +46,7 @@ Trong đó:
 
 ---
 
-## 2. Lấy log hai vế
+### 2. Lấy log hai vế
 
 Lấy logarithm của likelihood:
 
@@ -30,7 +61,7 @@ $$
 
 ---
 
-## 3. Áp dụng tính chất của log
+### 3. Áp dụng tính chất của log
 
 Sử dụng tính chất:
 
@@ -51,7 +82,7 @@ $$
 
 ---
 
-## 4. Tiếp tục tách tích bên trong log
+### 4. Tiếp tục tách tích bên trong log
 
 Áp dụng tiếp:
 
@@ -73,7 +104,7 @@ $$
 
 ---
 
-## 5. Đưa số mũ ra ngoài log
+### 5. Đưa số mũ ra ngoài log
 
 Sử dụng quy tắc:
 
@@ -97,3 +128,4 @@ y_i\log p_i
 $$
 
 Đây chính là **hàm Log-Likelihood** của Logistic Regression.
+
