@@ -11,14 +11,24 @@
             "id": "2b09965eab6923e3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Probobility & Statistic/Bayesian.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2026-08-27 09.22.24.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "Bayesian"
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-08-27 09.22.24.excalidraw"
+            }
+          },
+          {
+            "id": "935be365215c230e",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2026-08-30 00.31.25.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-08-30 00.31.25.excalidraw"
             }
           }
         ]
@@ -184,6 +194,12 @@
   },
   "active": "2b09965eab6923e3",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2026-08-30 00.31.25.excalidraw.md",
+    "Excalidraw/Libraries/local-library.excalidrawlib",
+    "Excalidraw/Libraries",
+    "Excalidraw/Drawing 2026-08-27 09.22.24.excalidraw.md",
+    "Mathematics.canvas",
+    "Probobility & Statistic/Bayesian.md",
     "Probobility & Statistic/MAP — Maximum A Posteriori.md",
     "Caculus/Logarithms - hàm ngược của số mũ.md",
     "Caculus/Kernel (Linear Algebra).md",
