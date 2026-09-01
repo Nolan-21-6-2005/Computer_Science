@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"id":"9cd7072be06b9be1","type":"text","text":"Một hệ thống phần mềm cần thu thập dữ liệu từ nhiều nguồn. Mục tiêu là để:\n- Phân tích dữ liệu. \n- Kiểm chứng thông tin. \n- Đa chiều hóa thông tin. ","x":480,"y":820,"width":240,"height":200},
+		{"id":"4513306d462eafab","type":"text","text":"","x":-85,"y":253,"width":250,"height":60},
+		{"id":"362dbbef17b028f7","x":300,"y":260,"width":240,"height":220,"type":"text","text":"Nếu thông tin được thu thập từ nhiều nguồn mà không có mục tiêu rõ ràng thì có thể dẫn đến quá tải thông tin. Vậy nên cần chọn lọc thông tin. \n"}
+	],
+	"edges":[
+		{"id":"68e83a11274f2845","fromNode":"9cd7072be06b9be1","fromSide":"top","toNode":"362dbbef17b028f7","toSide":"bottom"}
+	]
+}
