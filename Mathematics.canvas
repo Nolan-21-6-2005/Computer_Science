@@ -9,7 +9,8 @@
 		{"id":"d641754f3439867b","type":"text","text":"# Vector\n\nLà một cách để biểu diễn các thuộc tính của một đối tượng. \n\n- Giả sử có: 3 thì vector chứa các thuộc tính của nó là (1,1,1). \n- Ta thấy giá trị các tọa độ là thuộc tính của đối tượng \"3\". Và độ dài của vector chính là tổng cá tọa độ.\n- Dựa trên dữ kiện trên, ta có thể thấy 3 là [[Kernel in CNN|kernel]] của (1,1,1).","x":-998,"y":-1119,"width":440,"height":349},
 		{"id":"d83f24e892880b09","type":"text","text":"# Artificial Neural\nInput: input dữ liệu tuyến tính.\nOutput: dữ liệu phi tuyến.\n\nMục tiêu: Học quy luật của dữ liệu thông qua trọng số.\n![[Neural net.mp4]]\n\nBước 1: Nhận dữ liệu.\nBước 2: Khởi tạo trọng số ngẫu nhiên.\nBước 3: Đánh giá độ chính xác.\nBước 4: Cập nhật lại trọng số sao cho sai số nhỏ nhất có thể.","x":-1800,"y":-1440,"width":508,"height":460},
 		{"id":"5aac74b63391f6ac","type":"text","text":"Xác suất của sự kiện A và sự kiện B:\n$$P(AB)=P(A).P(A|B)=P(B).P(B|A)$$\n- Xác suất có điều kiện: $P(A|B)=\\frac{P(AB)}{P(A)}$","x":700,"y":140,"width":380,"height":240},
-		{"id":"198ae276b8124546","x":1321,"y":-500,"width":399,"height":460,"type":"text","text":"# Bayesian\n$$ P(h|D) =\n\n\\frac{P(D|h)P(h)}{P(D)} $$\n## Cách hiểu\n$$ \\boxed{ Posterior =\n\n\\frac{Likelihood \\times Prior}{Evidence} } $$\nHay:\n$$ Prior \\xrightarrow{\\text{quan sát dữ liệu}} Posterior $$\n\nTrong đó:\n\n$$P(h) \\rightarrow P(h|D) $$\n\n> Bắt đầu với một niềm tin ban đầu về giả thuyết → quan sát dữ liệu → cập nhật niềm tin đó thành xác suất hậu nghiệm."}
+		{"id":"198ae276b8124546","type":"text","text":"# Bayesian\n$$ P(h|D) =\n\n\\frac{P(D|h)P(h)}{P(D)} $$\n## Cách hiểu\n$$ \\boxed{ Posterior =\n\n\\frac{Likelihood \\times Prior}{Evidence} } $$\nHay:\n$$ Prior \\xrightarrow{\\text{quan sát dữ liệu}} Posterior $$\n\nTrong đó:\n\n$$P(h) \\rightarrow P(h|D) $$\n\n> Bắt đầu với một niềm tin ban đầu về giả thuyết → quan sát dữ liệu → cập nhật niềm tin đó thành xác suất hậu nghiệm.","x":1321,"y":-500,"width":399,"height":460},
+		{"id":"dfe993cee8b8f1a7","type":"text","text":"# Tổ hợp\n\n$$A^k_n=\\frac{n!}{(n-k)!}$$\n\n# Chỉnh hợp\n\n$$C^k_n=\\frac{n!}{k!(n-k)!}$$","x":988,"y":-1240,"width":333,"height":320}
 	],
 	"edges":[
 		{"id":"ffdf39e72c9f928f","fromNode":"9456a388b5e3a383","fromSide":"right","toNode":"8e4f315f182e3aed","toSide":"left"},
@@ -24,6 +25,7 @@
 		{"id":"bef9514dacf53b44","fromNode":"46c89bbd15213612","fromSide":"right","toNode":"d641754f3439867b","toSide":"left"},
 		{"id":"6e758a2ee59ee73b","fromNode":"8e4f315f182e3aed","fromSide":"bottom","toNode":"5aac74b63391f6ac","toSide":"top"},
 		{"id":"1d0ea02e27a60609","fromNode":"5aac74b63391f6ac","fromSide":"right","toNode":"198ae276b8124546","toSide":"bottom"},
-		{"id":"b38fbdd73adb859e","fromNode":"8e4f315f182e3aed","fromSide":"right","toNode":"198ae276b8124546","toSide":"left"}
+		{"id":"b38fbdd73adb859e","fromNode":"8e4f315f182e3aed","fromSide":"right","toNode":"198ae276b8124546","toSide":"left"},
+		{"id":"7ed56396ca12386e","fromNode":"8e4f315f182e3aed","fromSide":"top","toNode":"dfe993cee8b8f1a7","toSide":"bottom"}
 	]
 }

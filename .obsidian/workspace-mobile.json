@@ -11,59 +11,38 @@
             "id": "2b09965eab6923e3",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "canvas",
               "state": {
-                "file": "Excalidraw/Drawing 2026-08-27 09.22.24.excalidraw.md"
+                "file": "Mathematics.canvas",
+                "viewState": {
+                  "x": -187.76195140867662,
+                  "y": -1411.4453319565052,
+                  "zoom": -1.2227134153535608
+                }
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2026-08-27 09.22.24.excalidraw"
+              "icon": "lucide-layout-dashboard",
+              "title": "Mathematics"
             }
           },
           {
             "id": "935be365215c230e",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2026-08-30 00.31.25.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2026-08-30 00.31.25.excalidraw"
-            }
-          },
-          {
-            "id": "0d0ac97ef7474ab0",
-            "type": "leaf",
-            "state": {
               "type": "canvas",
               "state": {
-                "file": "Untitled.canvas",
+                "file": "Mathematics.canvas",
                 "viewState": {
-                  "x": 303.8375572807514,
-                  "y": 641.8909293722411,
-                  "zoom": -1.364413414029839
+                  "x": -221.3719399959018,
+                  "y": -1246.468360048563,
+                  "zoom": -1.2809935302447721
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "98a4abd618ab7ebf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Journaling/2026-08-31.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-08-31"
+              "title": "Mathematics"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -225,15 +204,19 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "98a4abd618ab7ebf",
+  "active": "935be365215c230e",
   "lastOpenFiles": [
-    "Lập trình.canvas",
+    "Mathematics.canvas",
+    "Giá trị số của máy tính.md",
+    "YTDown.com_Shorts_The-definition-of-a-derivative_Media_PGK-RXA8Ye8_002_720p.mp4",
+    "Probobility & Statistic/MAP — Maximum A Posteriori.md",
+    "Probobility & Statistic/Bayesian.md",
+    "Excalidraw/Drawing 2026-08-27 09.22.24.excalidraw.md",
     "Journaling/2026-08-31.md",
+    "Lập trình.canvas",
     "Data Structure & Algorithms.md",
     "Độ phức tạp của thuật toán.md",
     "Đối tượng.md",
-    "Giá trị số của máy tính.md",
-    "Excalidraw/Drawing 2026-08-27 09.22.24.excalidraw.md",
     "Attachments/images (12).jpeg",
     "Attachments/identity.png",
     "Attachments/dot product.png",
@@ -245,11 +228,8 @@
     "Attachments/images (11).jpeg",
     "Attachments/images.png",
     "Excalidraw/Computer Memory.excalidraw.md",
-    "Mathematics.canvas",
     "Excalidraw/Libraries/local-library.excalidrawlib",
     "Excalidraw/Libraries",
-    "Probobility & Statistic/Bayesian.md",
-    "Probobility & Statistic/MAP — Maximum A Posteriori.md",
     "Caculus/Logarithms - hàm ngược của số mũ.md",
     "Caculus/Kernel (Linear Algebra).md",
     "Linear Algebra/Ma trận.md",
