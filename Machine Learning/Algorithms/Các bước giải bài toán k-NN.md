@@ -9,7 +9,7 @@ tags:
 #### Bước 2: Tính khoảng cách từ điểm X đến tất cả các điểm trong tập huấn luyện.
 - Khoảng cách từ điểm $X(x_1, x_2)$ đến $M(x_1,x_2)$.
 $$
-d(X,M)=\sqrt{(x_1​−m_1​)2+(x_2​−m_2​)^2}​
+d(X,M)=\sqrt{(x_1​−m_1​)^2+(x_2​−m_2​)^2}​
 $$
 
 #### Bước 3: Sắp xếp các khoảng cách theo thứ tự tăng dần.
