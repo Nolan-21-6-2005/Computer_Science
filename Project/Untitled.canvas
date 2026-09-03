@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"2b7a25b666fbe38e","type":"text","text":"# Database","x":-240,"y":-27,"width":300,"height":200},
+		{"id":"ae215fccbb557769","type":"text","text":"# Weather Forcasting\nDự báo các thông tin:\n","x":-760,"y":320,"width":300,"height":180},
+		{"id":"bbb39aa9cfb37e32","type":"text","text":"# Watering Decision","x":-80,"y":400,"width":280,"height":200},
+		{"id":"4591e8282ded98b0","type":"text","text":"# Authenation\nThông tin user:\nUsername. \nPassword. \n\n","x":420,"y":-320,"width":260,"height":180},
+		{"id":"9c2cb823a9e22aff","type":"text","text":"# User\n- Họ và tên\n- Năm sinh\n- ","x":200,"y":66,"width":280,"height":214},
+		{"id":"747a6966b6f8166f","type":"text","text":"# Model","x":-530,"y":632,"width":290,"height":188},
+		{"id":"e18991651d16c72e","type":"text","text":"# Dashboard\nHiển thị thông tin dự báo thời tiết trong một tuần. \nHiển thị kết quả dự đoán quyết định tưới cây khi model predict dựa trên dữ liệu thời tiết hôm nay. ","x":-800,"y":-120,"width":340,"height":240},
+		{"id":"4475589f47d9d406","x":-1080,"y":670,"width":305,"height":190,"type":"text","text":""}
+	],
+	"edges":[
+		{"id":"9fbe4406297ce4c7","fromNode":"bbb39aa9cfb37e32","fromSide":"top","toNode":"9c2cb823a9e22aff","toSide":"bottom"},
+		{"id":"ca929cd0b3dc7971","fromNode":"747a6966b6f8166f","fromSide":"top","toNode":"ae215fccbb557769","toSide":"bottom"},
+		{"id":"91c49467aa7e2828","fromNode":"2b7a25b666fbe38e","fromSide":"bottom","toNode":"747a6966b6f8166f","toSide":"top"},
+		{"id":"d796f65f557623b7","fromNode":"747a6966b6f8166f","fromSide":"right","toNode":"bbb39aa9cfb37e32","toSide":"left"},
+		{"id":"95379f959786ce52","fromNode":"4591e8282ded98b0","fromSide":"bottom","toNode":"9c2cb823a9e22aff","toSide":"right"},
+		{"id":"f84655e869f1d373","fromNode":"ae215fccbb557769","fromSide":"right","toNode":"bbb39aa9cfb37e32","toSide":"left"},
+		{"id":"0198888d388de80e","fromNode":"ae215fccbb557769","fromSide":"top","toNode":"e18991651d16c72e","toSide":"bottom"},
+		{"id":"d9c61181dff6aa94","fromNode":"bbb39aa9cfb37e32","fromSide":"left","toNode":"e18991651d16c72e","toSide":"right"},
+		{"id":"a78faa75b2f64437","fromNode":"2b7a25b666fbe38e","fromSide":"right","toNode":"4591e8282ded98b0","toSide":"left"},
+		{"id":"770728328ec1975f","fromNode":"4475589f47d9d406","fromSide":"top","toNode":"ae215fccbb557769","toSide":"left"}
+	]
+}

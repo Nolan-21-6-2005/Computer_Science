@@ -1,14 +1,18 @@
 {
 	"nodes":[
-		{"id":"7d49abfa8a25a69d","x":-1080,"y":10175,"width":320,"height":285,"type":"text","text":"# Giới hạn kỹ thuật\n- Hiện tại có những gì? \n- Những thứ đó có thể làm được gì?\n- Có thể đáp ứng được bao nhiêu? \n\t- VD: Một server chạy có bao nhiêu người có thể truy cập? \n- Quy mô của bài toán như thế nào? "},
-		{"id":"97df31b9f4971f87","x":-820,"y":9780,"width":300,"height":220,"type":"text","text":"# Đặc tả phần mềm\n- Phần mềm có những chức năng gì? Vai trò của chúng? \n- Vì sao lại làm dự án như vậy? \n- Ai sẽ là người dùng? \n- "},
-		{"id":"e2137e9f3a6a9028","x":-280,"y":9600,"width":300,"height":220,"type":"text","text":"# Nhu cầu của thị trường\n- Con người cần sản phẩm này để làm gì? \n- Họ cần ở những khâu nào? \n- Nên bán với giá như thế nào? "},
-		{"id":"edc58eaa1baea1fd","x":-1440,"y":9840,"width":320,"height":280,"type":"text","text":"# Giới hạn về nguồn lực\n- Có đủ kinh tế hay không? \n- Cơ sở vật chất có đáp ứng đủ yêu cầu không? \n\t- VD: Máy tính có đủ mạnh để train AI không? "}
+		{"id":"7d49abfa8a25a69d","type":"text","text":"# Giới hạn kỹ thuật\n- Hiện tại có những gì? \n- Những thứ đó có thể làm được gì?\n- Có thể đáp ứng được bao nhiêu? \n\t- VD: Một server chạy có bao nhiêu người có thể truy cập? \n- Quy mô của bài toán như thế nào? ","x":-1080,"y":10175,"width":320,"height":285},
+		{"id":"97df31b9f4971f87","type":"text","text":"# Đặc tả phần mềm\n- Phần mềm có những chức năng gì? Vai trò của chúng? \n- Vì sao lại làm dự án như vậy? \n- Ai sẽ là người dùng? \n- ","x":-820,"y":9780,"width":300,"height":220},
+		{"id":"e2137e9f3a6a9028","type":"text","text":"# Nhu cầu của thị trường\n- Con người cần sản phẩm này để làm gì? \n- Họ cần ở những khâu nào? \n- Nên bán với giá như thế nào? ","x":-280,"y":9600,"width":300,"height":220},
+		{"id":"edc58eaa1baea1fd","type":"text","text":"# Giới hạn về nguồn lực\n- Có đủ kinh tế hay không? \n- Cơ sở vật chất có đáp ứng đủ yêu cầu không? \n\t- VD: Máy tính có đủ mạnh để train AI không? ","x":-1440,"y":9840,"width":320,"height":280},
+		{"id":"a9df0f088bb5adcc","type":"text","text":"# Bảo mật dữ liệu","x":-280,"y":10212,"width":300,"height":248},
+		{"id":"f23aaaa98913fb44","x":-1280,"y":9240,"width":360,"height":280,"type":"text","text":"# Quản lý dữ liệu\n- Thông tin cơ bản: hồ sơ của đối tượng. \n- Dữ liệu từ nhiều nguồn khác nhau. "}
 	],
 	"edges":[
 		{"id":"a05f006f0e08b190","fromNode":"97df31b9f4971f87","fromSide":"bottom","toNode":"7d49abfa8a25a69d","toSide":"top"},
 		{"id":"86bd593f9068084a","fromNode":"97df31b9f4971f87","fromSide":"left","toNode":"edc58eaa1baea1fd","toSide":"right"},
 		{"id":"fb016ad877fa58fd","fromNode":"edc58eaa1baea1fd","fromSide":"bottom","toNode":"7d49abfa8a25a69d","toSide":"left"},
-		{"id":"eebb15c270fb1dbc","fromNode":"97df31b9f4971f87","fromSide":"right","toNode":"e2137e9f3a6a9028","toSide":"left"}
+		{"id":"eebb15c270fb1dbc","fromNode":"97df31b9f4971f87","fromSide":"right","toNode":"e2137e9f3a6a9028","toSide":"left"},
+		{"id":"30877a57311904b7","fromNode":"97df31b9f4971f87","fromSide":"right","toNode":"a9df0f088bb5adcc","toSide":"left"},
+		{"id":"939021bd41ff229f","fromNode":"97df31b9f4971f87","fromSide":"top","toNode":"f23aaaa98913fb44","toSide":"bottom"}
 	]
 }
