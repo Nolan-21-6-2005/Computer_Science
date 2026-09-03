@@ -1,1 +1,7 @@
-{}
+{
+	"nodes":[
+		{"id":"eee3d8f95a9223cc","type":"text","text":"# Nguyên lý kinh tế\nNhu cầu con người là **vô hạn**.\nKhả năng đáp ứng là hữu hạn. \n\n$\\Rightarrow$ Cần lựa chọn phương pháp phân bổ nguồn lực. \n\n","x":-100,"y":-260,"width":320,"height":240},
+		{"id":"27b1700848c88f2e","type":"text","text":"## Đặc điểm của các mô hình kinh tế\n\n```chart\ntype: radar\nlabels: [Vai trò Nhà nước, Tự do thị trường, Sở hữu tư nhân, Cạnh tranh, Tín hiệu giá, Công bằng xã hội]\n\nseries:\n  - title: Kinh tế tập trung\n    data: [5, 1, 1, 1, 1, 4]\n\n  - title: Kinh tế thị trường\n    data: [1, 5, 5, 5, 5, 2]\n\n  - title: Kinh tế hỗn hợp\n    data: [3, 4, 4, 4, 4, 4]\n\nbeginAtZero: true\nfill: true\n```\n\n\n","x":140,"y":226,"width":400,"height":434}
+	],
+	"edges":[]
+}
