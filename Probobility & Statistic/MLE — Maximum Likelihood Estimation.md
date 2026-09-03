@@ -1,4 +1,4 @@
-
+![[GifExample.gif]]
 $$ \boxed{ Likelihood \times Prior } $$
 
 Tức là:

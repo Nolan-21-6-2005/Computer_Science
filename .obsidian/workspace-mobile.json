@@ -32,8 +32,8 @@
               "state": {
                 "file": "Mathematics.canvas",
                 "viewState": {
-                  "x": -570.3820629691156,
-                  "y": -57.67246850794267,
+                  "x": 196.54573562357675,
+                  "y": -1422.395687902754,
                   "zoom": -1.2809935302447721
                 }
               },
@@ -131,8 +131,8 @@
         "state": {
           "type": "notebook-navigator",
           "state": {},
-          "icon": "notebook-navigator",
-          "title": "Notebook Navigator"
+          "icon": "lucide-ghost",
+          "title": "notebook-navigator"
         }
       }
     ],
@@ -206,6 +206,7 @@
   },
   "active": "935be365215c230e",
   "lastOpenFiles": [
+    "Excalidraw/Derivative.excalidraw.md",
     "Mathematics.canvas",
     "Giá trị số của máy tính.md",
     "YTDown.com_Shorts_The-definition-of-a-derivative_Media_PGK-RXA8Ye8_002_720p.mp4",
