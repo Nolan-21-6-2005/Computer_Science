@@ -7,7 +7,7 @@
 		{"id":"9c2cb823a9e22aff","type":"text","text":"# User\n- Họ và tên\n- Năm sinh\n- ","x":200,"y":66,"width":280,"height":214},
 		{"id":"747a6966b6f8166f","type":"text","text":"# Model","x":-530,"y":632,"width":290,"height":188},
 		{"id":"e18991651d16c72e","type":"text","text":"# Dashboard\nHiển thị thông tin dự báo thời tiết trong một tuần. \nHiển thị kết quả dự đoán quyết định tưới cây khi model predict dựa trên dữ liệu thời tiết hôm nay. ","x":-800,"y":-120,"width":340,"height":240},
-		{"id":"4475589f47d9d406","x":-1080,"y":670,"width":305,"height":190,"type":"text","text":""}
+		{"id":"4475589f47d9d406","type":"text","text":"# Nguồn cơ sở dữ liệu khí tượng","x":-1180,"y":660,"width":320,"height":190}
 	],
 	"edges":[
 		{"id":"9fbe4406297ce4c7","fromNode":"bbb39aa9cfb37e32","fromSide":"top","toNode":"9c2cb823a9e22aff","toSide":"bottom"},
