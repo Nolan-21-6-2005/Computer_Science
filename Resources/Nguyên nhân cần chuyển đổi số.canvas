@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"a52d3230556f4c18","type":"text","text":"# Chi phí duy trì hệ thống\nNhững thứ cần duy trì:\n- Máy chủ cơ sở dữ liệu: Duy trì hệ thống thông tin. \n- Hệ thống mạng máy tính nội bộ. \n- Hệ thống phần cứng máy tính. \n- Phần mềm của máy tính. \n","x":900,"y":140,"width":360,"height":320},
+		{"id":"e96ca97cb6d1919b","type":"text","text":"# Sử dụng giấy và dụng cụ vật lý để quản lý doanh nghiệp\nƯu điểm:\n\n- Dễ dàng thao tác đối với mọi đối tượng trong doanh nghiệp. \n- Không yêu cầu trình độ chuyên môn đặc thù.\n- Thông tin được bảo mật gần tuyệt đối. \n\nNhược điểm:\n\n- Có nguy cơ bị hư hại, hỏng hóc. \n- Cần không gian vật lý để lưu trữ. \n- Không đảm bảo tính tin cậy. ","x":-415,"y":-140,"width":395,"height":400},
+		{"id":"e406f49d59e07f26","type":"text","text":"# Ảnh hưởng đến môi trường\n- Tăng nhu cầu sử dụng giấy => cần sử dụng gỗ nhiều hơn dẫn đến chặt phá rừng nhiều hơn. \n- Cần không gian vật lý để lưu trữ => có thể cần phải chặt phá môi trường để mở rộng không gian vật lý để lưu trữ thông tin. ","x":-600,"y":504,"width":370,"height":256},
+		{"id":"91d8da6b0a52bbbe","type":"text","text":"# Không đảm bảo sự minh bạch\n- Khi sử dụng giấy để quản lý doanh nghiệp, sự minh bạch phụ thuộc rất lớn vào người sử dụng giấy. Người tham gia quản lý có ý đồ gian lận hay không điều đó không thể biết rõ được. ","x":-1160,"y":-40,"width":400,"height":200},
+		{"id":"f9bde93986bbd3f6","type":"text","text":"# Chuyển đổi số\nƯu điểm:\n\n- Kiểm soát tốt hành vi của các thành viên trong doanh nghiệp, tăng tính minh bạch. \n- Giảm chi phí sử dụng giấy, chi phí về không gian lưu trữ. \n- Có thể lưu trữ một lượng lớn thông tin mà không tốn nhiều không gian hơn. \n\nNhược điểm:\n\n- Cần có trình độ chuyên môn để quản lý. \n- Rủi ro bảo mật. \n- Chi phí duy trì hệ thống sử dụng phương pháp chuyển đổi số cao hơn phương pháp truyền thống. ","x":240,"y":-240,"width":420,"height":460},
+		{"id":"b47852aaab0b2406","type":"text","text":"# Rủi ro bảo mật\nNếu như hệ thống thông tin bị xâm nhập hoặc bị cài đặt mã độc thì:\n- Rò rỉ dữ liệu, gây nguy hại cho doanh nghiệp. \nNếu máy chủ bị gửi các yêu cầu nặc danh dồn dập và liên tiếp gây \"nghẽn mạch\" của máy chủ thì:\n","x":140,"y":540,"width":340,"height":220}
+	],
+	"edges":[
+		{"id":"496de2ebf0ff23eb","fromNode":"e406f49d59e07f26","fromSide":"top","toNode":"e96ca97cb6d1919b","toSide":"bottom"},
+		{"id":"f689d9f5ebe6585f","fromNode":"91d8da6b0a52bbbe","fromSide":"right","toNode":"e96ca97cb6d1919b","toSide":"left"},
+		{"id":"378eb9e7272faf17","fromNode":"e96ca97cb6d1919b","fromSide":"right","toNode":"f9bde93986bbd3f6","toSide":"left"},
+		{"id":"d43f784b36b2eba2","fromNode":"b47852aaab0b2406","fromSide":"top","toNode":"f9bde93986bbd3f6","toSide":"bottom"},
+		{"id":"c371261eae907d39","fromNode":"a52d3230556f4c18","fromSide":"left","toNode":"f9bde93986bbd3f6","toSide":"right"}
+	]
+}
