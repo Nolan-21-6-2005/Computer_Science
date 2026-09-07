@@ -1,0 +1,8 @@
+{
+	"nodes":[
+		{"id":"6e596d853980df21","x":-200,"y":0,"width":320,"height":162,"type":"text","text":"Otomat hữu hạn"},
+		{"id":"ca68779e1e509c4f","x":300,"y":-217,"width":360,"height":757,"type":"text","text":"# Flowchart\n\nBiểu diễn luồng hoạt động của thuật toán\n\n```mermaid\nflowchart TD\n\tA[Nhap ten]\n\tB{Neu dung}\n\tC[Ket thuc]\n\tD[Tiep tuc]\n\tA --> B\n\tB --\"co\"--> C\n\tB --khong--> D\n\tD --> A\n```\n# Ma trận tương ứng \n```\n\n```"},
+		{"id":"551149e0db2b2719","x":-120,"y":-469,"width":355,"height":229,"type":"text","text":"# Ma trận của đồ thị có hướng \nĐược sử dụng để biểu diễn dạng nhị phân của các sơ đồ, thuật toán. Đồng thời biểu diễn cách máy tính số hóa và lưu trữ lời giải của con người. "}
+	],
+	"edges":[]
+}
