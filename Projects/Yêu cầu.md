@@ -1,0 +1,23 @@
+# Font chữ
+- Toàn hệ thống là chữ in đậm:
+	- Header: chữ màu đen (đã làm).
+	- Chữ ở icon màu xanh (đã làm).
+	- Chữ ở cation màu xám (đã có màu nhưng chưng in đậm, nét chữ nhỏ).
+# Style
+- Tất cả control của streamlit:
+	- Bo góc hai đầu (bốn góc có bo góc sâu).
+- Các control phức tạp: 
+	- Trang thống kê báo cáo:
+		- 
+	- Trang giám sát trực tiếp:
+		- Khung camera (lưới 4 ô).
+	- Trang nhật ký vi phạm:
+		- Thẻ card biểu diễn các số liệu sau: 
+			- Tổng số vi phạm.
+			- Số lần đoán chính xác.
+			- Số lần đoán không chính sác.
+		- Quản lý thông tin vi phạm: 
+			- Dạng listview.
+			- Hiển thị ảnh cho mỗi vi phạm.
+	- Trang quản lý người dùng:
+		- Dạng listview.
