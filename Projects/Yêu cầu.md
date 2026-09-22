@@ -1,0 +1,34 @@
+# Font chữ
+- Toàn hệ thống là chữ in đậm:
+	- Header: chữ màu đen (đã làm).
+	- Chữ ở icon màu xanh (đã làm).
+	- Chữ ở cation màu xám (đã có màu nhưng chưng in đậm, nét chữ nhỏ).
+# Style
+- Tất cả control của streamlit:
+	- Bo góc hai đầu (bốn góc có bo góc sâu).
+		- Text_input.
+		- Button.
+		- Selectbox.
+- Các control phức tạp (cần dùng html + js + css): 
+	- Admin:
+		- Trang thống kê báo cáo:
+			- Metric card biểu diễn: 
+				- Số lỗi vi phạm tăng lên bao nhiêu (giá trị số phần trăm). 
+				- Số lỗi vi phạm giảm đi bao nhiêu (giá trị số phần trăm).
+				- 
+			- Bảng lịch sử sử dụng app ở các phòng các phòng (thêm một bảng vào cơ sở dữ liệu).
+				- Số giờ các phòng đã sử dụng app.
+			- Bar chart lỗi vi phạm phổ biến (so sánh các loại lỗi vi phạm gồm 8 loại lỗi vi phạm).
+			- Line chart biểu diễn xu hướng của lỗi vi phạm.
+		- Trang giám sát trực tiếp:
+			- Khung camera (lưới 4 ô).
+		- Trang nhật ký vi phạm:
+			- Metric card biểu diễn các số liệu sau: 
+				- Tổng số vi phạm.
+				- Số lần đoán chính xác.
+				- Số lần đoán không chính sác.
+			- Quản lý thông tin vi phạm: 
+				- Dạng listview.
+				- Hiển thị ảnh cho mỗi vi phạm.
+		- Trang quản lý người dùng:
+			- Dạng listview.

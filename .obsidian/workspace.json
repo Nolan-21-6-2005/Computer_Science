@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "92fa55e272ab8260",
+        "id": "75afc5555ff9849c",
         "type": "tabs",
         "children": [
           {
-            "id": "76e860e5d5f32681",
+            "id": "6f580704a544c924",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "conflict-files-obsidian-git"
             }
           }
         ]
@@ -194,16 +198,41 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "76e860e5d5f32681",
+  "active": "d07f7702f128d836",
   "lastOpenFiles": [
-    "Computational Constraints.md",
-    "Text Generation.md",
-    "Phân loại văn bản.md",
-    "Phân loại email rác.md",
-    "Phân loại dạng văn bản.md",
-    "Machine Learning.md",
-    "Image Segmentation.md",
-    "Image Classification.md",
-    "Object Detection.md"
+    "conflict-files-obsidian-git.md",
+    "Resources/Natural Language Processing/Word Embedding.md",
+    "Resources/Natural Language Processing/Topic Classification.md",
+    "Resources/Natural Language Processing/Tokenization.md",
+    "Resources/Natural Language Processing/Text-to-Speech.md",
+    "Resources/Natural Language Processing/Text Summarization.md",
+    "Resources/Natural Language Processing/Text Retrieval.md",
+    "Resources/Natural Language Processing/Text Generation.md",
+    "Resources/Natural Language Processing/Text Correction.md",
+    "Resources/Natural Language Processing/Text Classification.md",
+    "Resources/Natural Language Processing/Stemming.md",
+    "Resources/Natural Language Processing/Speech-to-Text.md",
+    "Resources/Natural Language Processing/Spam Detection.md",
+    "Resources/Natural Language Processing/Sentiment Analysis.md",
+    "Resources/Natural Language Processing/Sentence Segmentation.md",
+    "Resources/Natural Language Processing/Sentence Embedding.md",
+    "Resources/Natural Language Processing/Semantic Similarity.md",
+    "Resources/Natural Language Processing/Semantic Search.md",
+    "Resources/Natural Language Processing/Relation Extraction.md",
+    "Resources/Natural Language Processing/Question Answering.md",
+    "Resources/Natural Language Processing/Paraphrase Generation.md",
+    "Resources/Natural Language Processing/POS Tagging.md",
+    "Resources/Natural Language Processing/Natural Language Inference.md",
+    "Resources/Natural Language Processing/Named Entity Recognition.md",
+    "Resources/Natural Language Processing/NLP — Các thông số cần quan tâm.md",
+    "Resources/Natural Language Processing/NLP MOC.md",
+    "Resources/Natural Language Processing",
+    "Resources/Machine Learning",
+    "Resources/Economy.canvas",
+    "Resources/Computer Vision",
+    "Resources/Computer Science.canvas",
+    "Resources",
+    "Projects",
+    "Project"
   ]
 }

@@ -1,0 +1,242 @@
+{
+  "main": {
+    "id": "0300fc969e8ceeb8",
+    "type": "split",
+    "children": [
+      {
+        "id": "731d3148effd47c9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2b09965eab6923e3",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Mathematics.canvas",
+                "viewState": {
+                  "x": -187.76195140867662,
+                  "y": -1411.4453319565052,
+                  "zoom": -1.2227134153535608
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Mathematics"
+            }
+          },
+          {
+            "id": "935be365215c230e",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Mathematics.canvas",
+                "viewState": {
+                  "x": 196.54573562357675,
+                  "y": -1422.395687902754,
+                  "zoom": -1.2809935302447721
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Mathematics"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d1cb8f99ede4de27",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "432579de831b6349",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "dc2d27cb1013bd11",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "tag:#rray",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "3d384213f999ede5",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "77d4f2cd640b34b0",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "All properties"
+        }
+      },
+      {
+        "id": "1240c4dbc100a830",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
+        }
+      },
+      {
+        "id": "774440477c8f4b2a",
+        "type": "leaf",
+        "state": {
+          "type": "notebook-navigator",
+          "state": {},
+          "icon": "lucide-ghost",
+          "title": "notebook-navigator"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "c5efa7a22861fd02",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "baf18033466f579f",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Data Structure & Algorithms.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
+        }
+      },
+      {
+        "id": "5d4491e1648844a0",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "2901d8034a8f3e7d",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "notebook-navigator:Notebook Navigator": false
+    }
+  },
+  "active": "935be365215c230e",
+  "lastOpenFiles": [
+    "Excalidraw/Derivative.excalidraw.md",
+    "Mathematics.canvas",
+    "Giá trị số của máy tính.md",
+    "YTDown.com_Shorts_The-definition-of-a-derivative_Media_PGK-RXA8Ye8_002_720p.mp4",
+    "Probobility & Statistic/MAP — Maximum A Posteriori.md",
+    "Probobility & Statistic/Bayesian.md",
+    "Excalidraw/Drawing 2026-08-27 09.22.24.excalidraw.md",
+    "Journaling/2026-08-31.md",
+    "Lập trình.canvas",
+    "Data Structure & Algorithms.md",
+    "Độ phức tạp của thuật toán.md",
+    "Đối tượng.md",
+    "Attachments/images (12).jpeg",
+    "Attachments/identity.png",
+    "Attachments/dot product.png",
+    "Attachments/Convolution_arithmetic_-_Padding_strides.gif",
+    "Attachments/cdn.langeek.webp",
+    "Attachments/Ánh_xạ_liên_tục_giữa_2_topo.png",
+    "Attachments/0b06645f-2766-495a-aa8a-bbc196a8be18_K-Means+Clustering+-+Emcord.webp",
+    "Attachments/2208_w048_n005_283b_p1_283.jpg",
+    "Attachments/images (11).jpeg",
+    "Attachments/images.png",
+    "Excalidraw/Computer Memory.excalidraw.md",
+    "Excalidraw/Libraries/local-library.excalidrawlib",
+    "Excalidraw/Libraries",
+    "Caculus/Logarithms - hàm ngược của số mũ.md",
+    "Caculus/Kernel (Linear Algebra).md",
+    "Linear Algebra/Ma trận.md",
+    "README.md",
+    "Journaling",
+    "Caculus/Đạo hàm.md",
+    "Machine Learning/Algorithms/Clustering.md"
+  ]
+}
