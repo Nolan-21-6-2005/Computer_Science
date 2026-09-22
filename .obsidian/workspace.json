@@ -11,14 +11,12 @@
             "id": "a7fb19a769b9e13d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Project/Untitled.md",
-                "mode": "source",
-                "source": false
+                "file": "Projects/GUI/Drawing 2026-09-08 08.16.20.excalidraw.md"
               },
-              "icon": "lucide-file",
-              "title": "Untitled"
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-09-08 08.16.20.excalidraw"
             }
           }
         ]
@@ -99,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Project/Untitled.md",
+                "file": "Projects/GUI/Drawing 2026-09-08 08.16.20.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -202,10 +200,10 @@
   },
   "active": "a7fb19a769b9e13d",
   "lastOpenFiles": [
+    "Project/Untitled.md",
     "Projects/GUI/Drawing 2026-09-08 08.16.20.excalidraw.md",
     "Projects/GUI",
     "Projects/Yêu cầu.md",
-    "Project/Untitled.md",
     "Resources/Computer Vision/3D Reconstruction.md",
     "Resources/Natural Language Processing/AI_Natural_Language_Processing.md",
     "Resources/Natural Language Processing/Chatbot.md",
