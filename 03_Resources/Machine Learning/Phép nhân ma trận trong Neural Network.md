@@ -7,7 +7,7 @@
 
 Một layer cơ bản thực hiện:
 
-Z=XW+bZ = XW + b
+$Z=XW+b$
 
 Trong đó:
 
