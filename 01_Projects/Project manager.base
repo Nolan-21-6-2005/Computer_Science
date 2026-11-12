@@ -1,0 +1,8 @@
+views:
+  - type: table
+    name: View
+  - type: cards
+    name: View 2
+    filters:
+      and:
+        - file.folder == "Computer_Sciences/01_Projects"
