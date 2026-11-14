@@ -57,3 +57,98 @@ root.innerHTML = `
     </div>
 `;
 ```
+
+```dataviewjs
+const pages = dv.pages('"01 Journal/Daily"');
+
+const today = dv.date("today");
+const weekStart = today.startOf("week");
+const weekEnd = weekStart.plus({ days: 7 });
+
+const daily = pages.where(p => {
+    const rawDate = p.date ?? p.file.day;
+    if (!rawDate) return false;
+
+    const date = dv.date(rawDate);
+
+    return date &&
+        date >= weekStart &&
+        date < weekEnd;
+});
+
+const sum = (field) =>
+    daily.array().reduce(
+        (total, p) => total + Number(p[field] ?? 0),
+        0
+    );
+
+const metrics = [
+    {
+        label: "DEEP WORK",
+        value: (sum("deep_work_minutes") / 60).toFixed(1),
+        unit: "h",
+        target: 15,
+        color: "orange",
+        suffix: "HOURS THIS WEEK"
+    },
+    {
+        label: "FOCUS SESSIONS",
+        value: sum("focus_sessions"),
+        unit: "",
+        target: 20,
+        color: "green",
+        suffix: "SESSIONS COMPLETED"
+    },
+    {
+        label: "EXPERIMENTS",
+        value: sum("experiments_completed"),
+        unit: "",
+        target: 4,
+        color: "purple",
+        suffix: "PRACTICAL EXPERIMENTS"
+    },
+    {
+        label: "RESEARCH REVIEWS",
+        value: sum("research_reviews"),
+        unit: "",
+        target: 5,
+        color: "yellow",
+        suffix: "PAPERS / DOCUMENTS"
+    }
+];
+
+const root = dv.el("div", "", {
+    cls: "study-kpi-grid"
+});
+
+root.innerHTML = metrics.map(m => {
+    const value = Number(m.value);
+    const percent = Math.min(
+        100,
+        Math.round(value / m.target * 100)
+    );
+
+    return `
+        <div class="study-kpi-card ${m.color}">
+            <div class="study-kpi-header">
+                <span>${m.label}</span>
+                <span class="study-kpi-status"></span>
+            </div>
+
+            <div class="study-kpi-value">
+                ${m.value}<small>${m.unit}</small>
+            </div>
+
+            <div class="study-kpi-footer">
+                <span>${percent}%</span>
+                <span>${m.suffix}</span>
+            </div>
+
+            <div class="study-kpi-track">
+                <div style="width:${percent}%"></div>
+            </div>
+        </div>
+    `;
+}).join("");
+
+```

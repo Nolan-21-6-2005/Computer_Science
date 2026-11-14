@@ -15,7 +15,8 @@ views:
       - coding
     sort: []
     columnSize:
-      file.name: 254
+      file.name: 247
       note.Excercises: 95
       note.study english: 121
       note.phone reduction: 151
+      note.coding: 199
