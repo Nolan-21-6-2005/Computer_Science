@@ -1,2 +1,4 @@
-[[Project manager.base]]
-[[Habit tracker]]
+
+
+![[Habit Tracker.base]]
+
