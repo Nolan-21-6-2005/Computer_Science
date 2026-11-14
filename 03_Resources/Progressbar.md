@@ -57,7 +57,6 @@ root.innerHTML = `
     </div>
 `;
 ```
-
 ```dataviewjs
 const pages = dv.pages('"01 Journal/Daily"');
 
