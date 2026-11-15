@@ -58,7 +58,7 @@ root.innerHTML = `
 `;
 ```
 ```dataviewjs
-const pages = dv.pages('"01 Journal/Daily"');
+const pages = dv.pages('"02_Areas/Daily"');
 
 const today = dv.date("today");
 const weekStart = today.startOf("week");
@@ -152,9 +152,19 @@ root.innerHTML = metrics.map(m => {
 
 ```
 ```dataviewjs
-const page = dv.page("02_Areas/Lesson.md");
+const lessons = dv.pages('"Computer_Sciences/02_Areas/Course"')
+    .where(p =>
+        /^Lesson(-\d+)?.md$/i.test(p.file.name) &&
+        p.status === "learning"
+    )
+    .array()
+    .sort((a, b) =>
+        Number(a.lesson_number ?? 0) -
+        Number(b.lesson_number ?? 0)
+    );
 
 const root = dv.container;
+root.innerHTML = "";
 
 function create(tag, cls, text = "") {
     const node = document.createElement(tag);
@@ -163,71 +173,66 @@ function create(tag, cls, text = "") {
     return node;
 }
 
-root.empty();
+// Luôn tạo Course Status
+const card = create("section", "course-status");
+root.appendChild(card);
 
-if (!page) {
-    root.createEl("p", {
-        text: "Current Lesson.md not found."
-    });
-} else {
-    const course = page.course ?? "Untitled Course";
-    const lesson = page.lesson ?? "No current lesson";
+// Header
+const header = create("div", "course-header");
+const heading = create("div", "course-heading");
+
+heading.append(
+    create("span", "course-icon", "⌁"),
+    create("span", "", "COURSE STATUS")
+);
+
+const badge = create(
+    "span",
+    "course-status-badge",
+    lessons.length ? "LEARNING" : "NO ACTIVE LESSON"
+);
+
+if (!lessons.length) {
+    badge.classList.add("course-inactive");
+}
+
+header.append(heading, badge);
+card.appendChild(header);
+
+// Current Lesson
+const current = create("div", "current-lesson");
+
+if (lessons.length > 0) {
+    const page = lessons[0];
+
     const number = Number(page.lesson_number ?? 0);
     const total = Number(page.total_lessons ?? 0);
-    const duration = page.duration ?? 0;
     const progress = total > 0
-        ? Math.min(100, Math.max(0, number / total * 100))
+        ? Math.min(100, number / total * 100)
         : 0;
 
-    const status = page.status ?? "learning";
-    const playlistId = page.playlist_id ?? "";
-    const lessonUrl = page.lesson_url ?? "";
-    const courseUrl = page.course_url ?? "";
-
-    // MAIN CARD
-    const card = create("section", "course-status");
-    root.appendChild(card);
-
-    // HEADER
-    const header = create("div", "course-header");
-
-    const heading = create("div", "course-heading");
-    const icon = create("span", "course-icon", "⌁");
-    const title = create("span", "", "COURSE STATUS");
-
-    heading.append(icon, title);
-
-    const badge = create(
-        "span",
-        "course-status-badge",
-        status.toUpperCase()
-    );
-
-    header.append(heading, badge);
-    card.appendChild(header);
-
-    // CURRENT LESSON
-    const current = create("div", "current-lesson");
-
     const top = create("div", "course-meta");
+
     top.append(
         create("span", "course-label", "CURRENT LESSON"),
-        create(
-            "span",
-            "course-number",
-            `${number} / ${total} LESSONS`
+        create("span", "course-number",
+            total ? `${number} / ${total} LESSONS` : `LESSON ${number || "—"}`
         )
     );
 
     const info = create("div", "course-info");
 
     const left = create("div", "course-info-left");
+
     left.append(
-        create("div", "course-lesson-name", lesson),
-        create("div", "course-name", `${course} · ${page.platform ?? ""}`)
+        create("div", "course-lesson-name", page.file.name),
+        create("div", "course-name",
+            `${page.course ?? "Computer Vision"} · ${page.platform ?? "Learning"}`
+        )
     );
 
     const right = create("div", "course-info-right");
+
     right.append(
         create("div", "course-percentage", `${Math.round(progress)}%`),
         create("div", "course-caption", "COURSE PROGRESS")
@@ -237,34 +242,48 @@ if (!page) {
 
     const track = create("div", "course-progress-track");
     const fill = create("div", "course-progress-fill");
+
     fill.style.width = `${progress}%`;
     track.appendChild(fill);
 
     const bottom = create("div", "course-bottom");
 
-    const durationText = create(
-        "span",
-        "course-duration",
-        `${duration} MINUTES`
+    bottom.append(
+        create("span", "course-duration",
+            `${page.duration ?? 0} MINUTES`
+        )
     );
 
-    const lessonLink = create("a", "course-open", "OPEN CURRENT LESSON ↗");
-    lessonLink.href = lessonUrl || courseUrl || "#";
-    lessonLink.target = "_blank";
-    lessonLink.rel = "noopener noreferrer";
+    const link = create("a", "course-open", "OPEN CURRENT LESSON ↗");
 
-    bottom.append(durationText, lessonLink);
+    link.href = page.lesson_url
+        ? page.lesson_url
+        : `obsidian://open?vault=${encodeURIComponent(app.vault.getName())}&file=${encodeURIComponent(page.file.path)}`;
+
+    link.target = "_blank";
+    bottom.appendChild(link);
 
     current.append(top, info, track, bottom);
-    card.appendChild(current);
+
+} else {
+    current.append(
+        create("div", "course-label", "CURRENT LESSON"),
+        create("div", "course-lesson-name", "No active lesson"),
+        create("div", "course-name",
+            "Select a lesson and set status to learning."
+        )
+    );
 }
+
+card.appendChild(current);
+
 ```
 ```dataviewjs
 // ======================================
 // DAILY TASKS + PERSONAL PROJECTS
 // ======================================
 
-const dailyPage = dv.page("05 Tasks/Daily Tasks.md");
+const dailyPage = dv.page("02_Areas/Daily Tasks.md");
 
 const projectPages = dv.pages('"03 Projects"')
     .where(p =>
@@ -501,3 +520,4 @@ workspace.append(
     createProjectCard()
 );
 ```
+
