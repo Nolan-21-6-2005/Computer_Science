@@ -58,97 +58,759 @@ root.innerHTML = `
 `;
 ```
 ```dataviewjs
-const pages = dv.pages('"02_Areas/Daily"');
 
-const today = dv.date("today");
-const weekStart = today.startOf("week");
-const weekEnd = weekStart.plus({ days: 7 });
+// ==========================================
+// STUDY KPI DASHBOARD
+// TERMINAL × CYBERPUNK MINIMAL
+// ==========================================
 
-const daily = pages.where(p => {
-    const rawDate = p.date ?? p.file.day;
-    if (!rawDate) return false;
+// ---------- CONFIGURATION ----------
 
-    const date = dv.date(rawDate);
+const SESSION_FOLDER =
+    '"Computer_Sciences/02_Areas/Work Sessions"';
 
-    return date &&
-        date >= weekStart &&
-        date < weekEnd;
-});
+// ---------- DATE RANGE: CURRENT WEEK ----------
 
-const sum = (field) =>
-    daily.array().reduce(
-        (total, p) => total + Number(p[field] ?? 0),
-        0
-    );
+const now = new Date();
 
-const metrics = [
+const today = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate()
+);
+
+const weekStart = new Date(today);
+
+weekStart.setDate(
+    today.getDate() - ((today.getDay() + 6) % 7)
+);
+
+function toDateKey(date) {
+    const y = date.getFullYear();
+    const m = String(date.getMonth() + 1).padStart(2, "0");
+    const d = String(date.getDate()).padStart(2, "0");
+
+    return `${y}-${m}-${d}`;
+}
+
+const startKey = toDateKey(weekStart);
+const todayKey = toDateKey(today);
+
+// ---------- LOAD SESSION DATA ----------
+
+const sessions = dv.pages(SESSION_FOLDER)
+    .where(p => p.type === "work_session")
+    .array()
+    .map(p => {
+
+        const date = dv.date(p.date);
+
+        if (!date || !date.isValid) return null;
+
+        const dateKey = date.toFormat("yyyy-MM-dd");
+
+        // Only include sessions in current week
+        if (
+            dateKey < startKey ||
+            dateKey > todayKey
+        ) return null;
+
+        // Checkbox completion
+        const tasks = p.file.tasks ?? [];
+
+        const completed = tasks.some(
+            task => task.completed
+        );
+
+        if (!completed) return null;
+
+        // Parse time
+        const start = String(p.start ?? "");
+        const end = String(p.end ?? "");
+
+        const startMatch =
+            start.match(/^(\d{2}):(\d{2})$/);
+
+        const endMatch =
+            end.match(/^(\d{2}):(\d{2})$/);
+
+        if (!startMatch || !endMatch) return null;
+
+        const startMinutes =
+            Number(startMatch[1]) * 60 +
+            Number(startMatch[2]);
+
+        const endMinutes =
+            Number(endMatch[1]) * 60 +
+            Number(endMatch[2]);
+
+        let duration = endMinutes - startMinutes;
+
+        // Support overnight sessions
+        if (duration <= 0) {
+            duration += 1440;
+        }
+
+        return {
+            name: p.file.name,
+            category: String(p.category ?? "")
+                .toLowerCase()
+                .trim(),
+            duration: duration / 60,
+            date: dateKey
+        };
+    })
+    .filter(Boolean);
+
+// ---------- CALCULATE KPI ----------
+
+const deepWorkSessions = sessions.filter(
+    s => s.category === "deep_work"
+);
+
+const experimentSessions = sessions.filter(
+    s => s.category === "experiment"
+);
+
+const researchSessions = sessions.filter(
+    s => s.category === "research_review"
+);
+
+const totalDeepWorkHours = deepWorkSessions.reduce(
+    (total, session) => total + session.duration,
+    0
+);
+
+// ---------- KPI CONFIGURATION ----------
+
+const kpis = [
     {
-        label: "DEEP WORK",
-        value: (sum("deep_work_minutes") / 60).toFixed(1),
+        title: "DEEP WORK",
+        value: totalDeepWorkHours.toFixed(1),
         unit: "h",
-        target: 15,
-        color: "orange",
-        suffix: "HOURS THIS WEEK"
+        footerLeft: "THIS WEEK",
+        footerRight: "HOURS LOGGED",
+        color: "orange"
     },
     {
-        label: "FOCUS SESSIONS",
-        value: sum("focus_sessions"),
+        title: "FOCUS SESSIONS",
+        value: deepWorkSessions.length,
         unit: "",
-        target: 20,
-        color: "green",
-        suffix: "SESSIONS COMPLETED"
+        footerLeft: "THIS WEEK",
+        footerRight: "SESSIONS COMPLETED",
+        color: "green"
     },
     {
-        label: "EXPERIMENTS",
-        value: sum("experiments_completed"),
+        title: "EXPERIMENTS",
+        value: experimentSessions.length,
         unit: "",
-        target: 4,
-        color: "purple",
-        suffix: "PRACTICAL EXPERIMENTS"
+        footerLeft: "THIS WEEK",
+        footerRight: "PRACTICAL EXPERIMENTS",
+        color: "purple"
     },
     {
-        label: "RESEARCH REVIEWS",
-        value: sum("research_reviews"),
+        title: "RESEARCH REVIEWS",
+        value: researchSessions.length,
         unit: "",
-        target: 5,
-        color: "yellow",
-        suffix: "PAPERS / DOCUMENTS"
+        footerLeft: "THIS WEEK",
+        footerRight: "PAPERS / DOCUMENTS",
+        color: "yellow"
     }
 ];
 
-const root = dv.el("div", "", {
-    cls: "study-kpi-grid"
-});
+// ---------- DOM HELPER ----------
 
-root.innerHTML = metrics.map(m => {
-    const value = Number(m.value);
-    const percent = Math.min(
-        100,
-        Math.round(value / m.target * 100)
+function el(tag, className, text = "") {
+    const node = document.createElement(tag);
+
+    if (className) {
+        node.className = className;
+    }
+
+    if (text !== "") {
+        node.textContent = text;
+    }
+
+    return node;
+}
+
+// ---------- RENDER ----------
+
+const root = dv.container;
+
+root.innerHTML = "";
+
+const grid = el("div", "study-kpi-grid");
+
+kpis.forEach(kpi => {
+
+    const card = el(
+        "section",
+        `study-kpi-card ${kpi.color}`
     );
 
-    return `
-        <div class="study-kpi-card ${m.color}">
-            <div class="study-kpi-header">
-                <span>${m.label}</span>
-                <span class="study-kpi-status"></span>
-            </div>
+    // Header
+    const header = el(
+        "div",
+        "study-kpi-header"
+    );
 
-            <div class="study-kpi-value">
-                ${m.value}<small>${m.unit}</small>
-            </div>
+    const title = el(
+        "span",
+        "study-kpi-title",
+        kpi.title
+    );
 
-            <div class="study-kpi-footer">
-                <span>${percent}%</span>
-                <span>${m.suffix}</span>
-            </div>
+    const status = el(
+        "span",
+        "study-kpi-status"
+    );
 
-            <div class="study-kpi-track">
-                <div style="width:${percent}%"></div>
-            </div>
-        </div>
-    `;
-}).join("");
+    header.append(title, status);
+
+    // Main value
+    const value = el(
+        "div",
+        "study-kpi-value"
+    );
+
+    value.appendChild(
+        document.createTextNode(String(kpi.value))
+    );
+
+    if (kpi.unit) {
+        value.appendChild(
+            el("small", "", kpi.unit)
+        );
+    }
+
+    // Footer
+    const footer = el(
+        "div",
+        "study-kpi-footer"
+    );
+
+    footer.append(
+        el("span", "", kpi.footerLeft),
+        el("span", "", kpi.footerRight)
+    );
+
+    // Decorative accent line
+    const track = el(
+        "div",
+        "study-kpi-track"
+    );
+
+    const fill = el("div", "");
+
+    track.appendChild(fill);
+
+    // Assemble card
+    card.append(
+        header,
+        value,
+        footer,
+        track
+    );
+
+    grid.appendChild(card);
+});
+
+// ---------- EMPTY / ERROR HANDLING ----------
+
+if (kpis.length === 0) {
+    root.appendChild(
+        el("p", "workspace-empty", "NO KPI DATA")
+    );
+} else {
+    root.appendChild(grid);
+}
+
+```
+```dataviewjs
+
+(async () => {
+
+// ============================================
+// SCHEDULE + DAILY TASKS
+// DATA SOURCE: MARKDOWN FILES IN OBSIDIAN VAULT
+// ============================================
+
+
+// ============================================
+// 1. CONFIGURATION
+// ============================================
+
+const SCHEDULE_PATH = "Computer_Sciences/02_Areas/Daily Schedule.md";
+const DAILY_TASK_PATH = "Computer_Sciences/02_Areas/Daily Tasks.md";
+
+const root = dv.container;
+root.innerHTML = "";
+
+
+// ============================================
+// 2. DOM HELPERS
+// ============================================
+
+function el(tag, className, text = "") {
+    const node = document.createElement(tag);
+
+    if (className) node.className = className;
+    if (text !== "") node.textContent = text;
+
+    return node;
+}
+
+
+// ============================================
+// 3. READ SCHEDULE MARKDOWN
+// ============================================
+
+const scheduleFile =
+    app.vault.getAbstractFileByPath(SCHEDULE_PATH);
+
+let scheduleEvents = [];
+let scheduleError = null;
+
+if (scheduleFile) {
+    try {
+        const content = await app.vault.read(scheduleFile);
+
+        scheduleEvents = content
+            .split("\n")
+            .map(line => {
+
+                // Hỗ trợ:
+                // - 08:00 | Gym
+                // * 09:00 | Study
+                // 10:00 | Meeting
+
+                const match = line.match(
+                    /^\s*(?:[-*+]\s*)?(\d{2}:\d{2})\s*\|\s*(.+?)\s*$/
+                );
+
+                if (!match) return null;
+
+                return {
+                    time: match[1],
+                    title: match[2]
+                };
+            })
+            .filter(Boolean)
+            .sort((a, b) =>
+                a.time.localeCompare(b.time)
+            );
+
+    } catch (error) {
+        console.error("Could not read schedule:", error);
+        scheduleError = error;
+    }
+}
+
+
+// ============================================
+// 4. READ DAILY TASKS
+// ============================================
+
+const dailyPage = dv.page("02_Areas/Daily Tasks");
+
+function getTasks(page) {
+    if (!page) return [];
+
+    return (page.file.tasks ?? []).map(task => ({
+        ...task,
+        path: page.file.path,
+        completed: Boolean(task.completed)
+    }));
+}
+
+const dailyTasks = getTasks(dailyPage);
+
+
+// ============================================
+// 5. MAIN LAYOUT
+// ============================================
+
+const workspace = el("div", "workspace-grid");
+
+root.appendChild(workspace);
+
+
+// ============================================
+// 6. PROGRESS FUNCTION
+// ============================================
+
+function updateProgress(tasks, fill, count, percent) {
+
+    const total = tasks.length;
+
+    const completed = tasks.filter(
+        task => task.completed
+    ).length;
+
+    const ratio = total
+        ? Math.round(completed / total * 100)
+        : 0;
+
+    fill.style.width = `${ratio}%`;
+
+    count.textContent = `${completed}/${total}`;
+
+    percent.textContent = `${ratio}%`;
+}
+
+
+// ============================================
+// 7. TASK RENDERER
+// ============================================
+
+function renderTask(task, container, onUpdate) {
+
+    const row = el("label", "workspace-task");
+
+    const checkbox = el("input", "workspace-checkbox");
+
+    checkbox.type = "checkbox";
+    checkbox.checked = task.completed;
+
+    const text = el(
+        "span",
+        "workspace-task-text",
+        task.text
+    );
+
+    if (task.completed) {
+        text.classList.add("is-completed");
+    }
+
+
+    // Checkbox interaction
+
+    checkbox.addEventListener("change", async () => {
+
+        const newState = checkbox.checked;
+
+        const file = app.vault.getAbstractFileByPath(
+            task.path
+        );
+
+        if (!file) {
+            checkbox.checked = task.completed;
+            return;
+        }
+
+        checkbox.disabled = true;
+
+        try {
+
+            await app.vault.process(file, content => {
+
+                const lines = content.split("\n");
+
+                // Dataview line number thường bắt đầu từ 1.
+                // Thử cả hai vị trí để tương thích.
+
+                const candidates = [
+                    Number(task.line) - 1,
+                    Number(task.line)
+                ].filter((value, index, array) =>
+                    Number.isInteger(value) &&
+                    value >= 0 &&
+                    value < lines.length &&
+                    array.indexOf(value) === index
+                );
+
+                const checkboxRegex =
+                    /^(\s*(?:[-*+]|\d+\.)\s*)\[([ xX])\](.*)$/;
+
+                // Ưu tiên dòng khớp nội dung task
+                let lineIndex = candidates.find(index => {
+                    const line = lines[index];
+
+                    return checkboxRegex.test(line) &&
+                        line.includes(task.text);
+                });
+
+                // Nếu không khớp nội dung, thử vị trí task
+                if (lineIndex === undefined) {
+                    lineIndex = candidates.find(index =>
+                        checkboxRegex.test(lines[index])
+                    );
+                }
+
+                if (lineIndex === undefined) {
+                    console.warn(
+                        "Could not locate task line:",
+                        task.text
+                    );
+
+                    return content;
+                }
+
+                const line = lines[lineIndex];
+
+                lines[lineIndex] = line.replace(
+                    checkboxRegex,
+                    (_, prefix, oldState, rest) =>
+                        `${prefix}[${newState ? "x" : " "}]${rest}`
+                );
+
+                return lines.join("\n");
+            });
+
+            task.completed = newState;
+
+            text.classList.toggle(
+                "is-completed",
+                newState
+            );
+
+            onUpdate();
+
+        } catch (error) {
+
+            console.error(
+                "Could not update task:",
+                error
+            );
+
+            checkbox.checked = task.completed;
+
+        } finally {
+
+            checkbox.disabled = false;
+
+        }
+    });
+
+
+    row.append(checkbox, text);
+
+    container.appendChild(row);
+}
+
+
+// ============================================
+// 8. CARD HEADER
+// ============================================
+
+function createCardHeader(title, iconName, countText) {
+
+    const header = el("div", "workspace-card-header");
+
+    const heading = el("div", "workspace-card-title");
+
+    heading.append(
+        el("span", "workspace-card-icon", iconName),
+        el("span", "", title)
+    );
+
+    const count = el(
+        "span",
+        "workspace-count",
+        countText
+    );
+
+    header.append(heading, count);
+
+    return {
+        header,
+        count
+    };
+}
+
+
+// ============================================
+// 9. SCHEDULE PANEL
+// ============================================
+
+function createScheduleCard() {
+
+    const card = el(
+        "section",
+        "workspace-card schedule-card"
+    );
+
+    const { header } = createCardHeader(
+        "SCHEDULE",
+        "◷",
+        `${scheduleEvents.length} EVENTS`
+    );
+
+    const grid = el("div", "schedule-grid");
+
+    const leftColumn = el("div", "schedule-column");
+
+    const rightColumn = el("div", "schedule-column");
+
+
+    // Split events into two columns
+
+    const midpoint = Math.ceil(
+        scheduleEvents.length / 2
+    );
+
+    scheduleEvents.forEach((event, index) => {
+
+        const row = el("div", "schedule-event");
+
+        const time = el(
+            "span",
+            "schedule-time",
+            event.time
+        );
+
+        const title = el(
+            "span",
+            "schedule-title",
+            event.title
+        );
+
+        row.append(time, title);
+
+        if (index < midpoint) {
+            leftColumn.appendChild(row);
+        } else {
+            rightColumn.appendChild(row);
+        }
+    });
+
+
+    // Empty state
+
+    if (scheduleEvents.length === 0) {
+
+        let message = "No schedule events found.";
+
+        if (!scheduleFile) {
+            message = "Daily Schedule.md not found.";
+        } else if (scheduleError) {
+            message = "Could not read schedule file.";
+        }
+
+        grid.appendChild(
+            el("p", "workspace-empty", message)
+        );
+
+    } else {
+
+        grid.append(leftColumn, rightColumn);
+
+    }
+
+
+    card.append(header, grid);
+
+    return card;
+}
+
+
+// ============================================
+// 10. DAILY TASKS PANEL
+// ============================================
+
+function createDailyCard() {
+
+    const card = el(
+        "section",
+        "workspace-card daily-card"
+    );
+
+
+    // Header
+
+    const { header, count } = createCardHeader(
+        "DAILY TASKS",
+        "▣",
+        "0/0"
+    );
+
+
+    // Progress information
+
+    const stats = el("div", "workspace-stats");
+
+    const percent = el(
+        "span",
+        "workspace-percent",
+        "0%"
+    );
+
+    const caption = el(
+        "span",
+        "workspace-caption",
+        "DAILY COMPLETION"
+    );
+
+    stats.append(percent, caption);
+
+    // Task grid
+
+    const taskGrid = el(
+        "div",
+        "workspace-task-grid"
+    );
+
+    dailyTasks.forEach(task => {
+
+        renderTask(task, taskGrid, () => {
+
+            updateProgress(
+                dailyTasks,
+                fill,
+                count,
+                percent
+            );
+
+        });
+
+    });
+
+
+    // Empty state
+
+    if (!dailyPage) {
+
+        card.appendChild(
+            el(
+                "p",
+                "workspace-empty",
+                "Daily Tasks.md not found."
+            )
+        );
+
+    } else if (dailyTasks.length === 0) {
+
+        card.appendChild(
+            el(
+                "p",
+                "workspace-empty",
+                "No tasks available."
+            )
+        );
+
+    }
+
+
+    card.append(
+        header,
+        taskGrid
+    );
+
+    return card;
+}
+
+
+// ============================================
+// 11. RENDER DASHBOARD
+// ============================================
+
+workspace.append(
+    createScheduleCard(),
+    createDailyCard()
+);
+
+})();
 
 ```
 ```dataviewjs
@@ -173,7 +835,7 @@ function create(tag, cls, text = "") {
     return node;
 }
 
-// Luôn tạo Course Status
+// Course Status
 const card = create("section", "course-status");
 root.appendChild(card);
 
@@ -207,6 +869,7 @@ if (lessons.length > 0) {
 
     const number = Number(page.lesson_number ?? 0);
     const total = Number(page.total_lessons ?? 0);
+
     const progress = total > 0
         ? Math.min(100, number / total * 100)
         : 0;
@@ -216,7 +879,9 @@ if (lessons.length > 0) {
     top.append(
         create("span", "course-label", "CURRENT LESSON"),
         create("span", "course-number",
-            total ? `${number} / ${total} LESSONS` : `LESSON ${number || "—"}`
+            total
+                ? `${number} / ${total} LESSONS`
+                : `LESSON ${number || "—"}`
         )
     );
 
@@ -254,14 +919,22 @@ if (lessons.length > 0) {
         )
     );
 
-    const link = create("a", "course-open", "OPEN CURRENT LESSON ↗");
+    // Open Current Lesson
+    const button = create(
+        "button",
+        "course-open",
+        "OPEN CURRENT LESSON ↗"
+    );
 
-    link.href = page.lesson_url
-        ? page.lesson_url
-        : `obsidian://open?vault=${encodeURIComponent(app.vault.getName())}&file=${encodeURIComponent(page.file.path)}`;
+    button.addEventListener("click", async () => {
+        await app.workspace.openLinkText(
+            page.file.path,
+            "",
+            false
+        );
+    });
 
-    link.target = "_blank";
-    bottom.appendChild(link);
+    bottom.appendChild(button);
 
     current.append(top, info, track, bottom);
 
@@ -276,248 +949,152 @@ if (lessons.length > 0) {
 }
 
 card.appendChild(current);
-
 ```
 ```dataviewjs
-// ======================================
-// DAILY TASKS + PERSONAL PROJECTS
-// ======================================
-
-const dailyPage = dv.page("02_Areas/Daily Tasks.md");
-
-const projectPages = dv.pages('"03 Projects"')
+const projects = dv.pages('"Computer_Sciences/01_Projects"')
     .where(p =>
         p.type === "project" &&
-        p.status === "active"
+        p.status === "active" &&
+        p.deadline
     )
-    .sort(p => p.file.name, "asc")
-    .array();
+    .array()
+    .map(p => {
+        const deadline = dv.date(p.deadline);
+        const today = dv.date("today");
 
-// ---------- DOM HELPERS ----------
+        const daysLeft = Math.ceil(
+            deadline.startOf("day").diff(
+                today.startOf("day"),
+                "days"
+            ).days
+        );
 
-function el(tag, className, text = "") {
+        return {
+            page: p,
+            name: p.title ?? p.file.name,
+            deadline,
+            daysLeft,
+            progress: Number(p.progress ?? 0),
+            priority: p.priority ?? "normal"
+        };
+    })
+    .sort((a, b) => a.daysLeft - b.daysLeft);
+
+
+// DOM helper
+function el(tag, cls, text = "") {
     const node = document.createElement(tag);
-    if (className) node.className = className;
+    if (cls) node.className = cls;
     if (text !== "") node.textContent = text;
     return node;
 }
 
-function getTasks(page) {
-    if (!page) return [];
-    return (page.file.tasks ?? []).map(task => ({
-        ...task,
-        path: page.file.path,
-        completed: Boolean(task.completed)
-    }));
-}
 
-// ---------- TASK DATA ----------
+// Main panel
+const root = dv.container;
+root.innerHTML = "";
 
-const dailyTasks = getTasks(dailyPage);
+const card = el("section", "project-deadline-card");
 
-const projects = projectPages.map(page => ({
-    name: page.title ?? page.file.name,
-    path: page.file.path,
-    tasks: getTasks(page)
-}));
+const header = el("div", "project-deadline-header");
 
-// ---------- MAIN LAYOUT ----------
-
-const workspace = el("div", "workspace-grid");
-dv.container.appendChild(workspace);
-
-// ---------- PROGRESS ----------
-
-function updateProgress(tasks, progress, count, percent) {
-    const total = tasks.length;
-    const completed = tasks.filter(t => t.completed).length;
-    const ratio = total ? Math.round(completed / total * 100) : 0;
-
-    progress.style.width = `${ratio}%`;
-    count.textContent = `${completed}/${total}`;
-    percent.textContent = `${ratio}%`;
-}
-
-// ---------- TASK RENDERER ----------
-
-function renderTask(task, container, onUpdate) {
-    const row = el("label", "workspace-task");
-
-    const checkbox = el("input", "workspace-checkbox");
-    checkbox.type = "checkbox";
-    checkbox.checked = task.completed;
-
-    const text = el("span", "workspace-task-text", task.text);
-
-    if (task.completed) {
-        text.classList.add("is-completed");
-    }
-
-    checkbox.addEventListener("change", async () => {
-        const newState = checkbox.checked;
-        const file = app.vault.getAbstractFileByPath(task.path);
-
-        if (!file) {
-            checkbox.checked = task.completed;
-            return;
-        }
-
-        checkbox.disabled = true;
-
-        try {
-            await app.vault.process(file, content => {
-                const lines = content.split("\n");
-                const line = lines[task.line];
-
-                if (line === undefined) return content;
-
-                const updated = line.replace(
-                    /^(\s*[-*]\s*)\[([ xX])\]/,
-                    (_, prefix) => `${prefix}[${newState ? "x" : " "}]`
-                );
-
-                lines[task.line] = updated;
-                return lines.join("\n");
-            });
-
-            task.completed = newState;
-            text.classList.toggle("is-completed", newState);
-            onUpdate();
-
-        } catch (error) {
-            console.error("Could not update task:", error);
-            checkbox.checked = task.completed;
-        } finally {
-            checkbox.disabled = false;
-        }
-    });
-
-    row.append(checkbox, text);
-    container.appendChild(row);
-}
-
-// ---------- CARD HEADER ----------
-
-function createCardHeader(title, iconName, colorClass) {
-    const header = el("div", "workspace-card-header");
-
-    const heading = el("div", "workspace-card-title");
-    const icon = el("span", "workspace-card-icon", iconName);
-    const label = el("span", "", title);
-
-    heading.append(icon, label);
-
-    const count = el("span", "workspace-count", "0/0");
-    header.append(heading, count);
-
-    return { header, count };
-}
-
-// ---------- DAILY TASK CARD ----------
-
-function createDailyCard() {
-    const card = el("section", "workspace-card daily-card");
-
-    const { header, count } =
-        createCardHeader("DAILY TASKS", "▣");
-
-    const stats = el("div", "workspace-stats");
-    const percent = el("span", "workspace-percent", "0%");
-    const caption = el("span", "workspace-caption", "DAILY COMPLETION");
-
-    stats.append(percent, caption);
-
-    const track = el("div", "workspace-progress-track");
-    const fill = el("div", "workspace-progress-fill daily-fill");
-    track.appendChild(fill);
-
-    const taskGrid = el("div", "workspace-task-grid");
-
-    dailyTasks.forEach(task => {
-        renderTask(task, taskGrid, () =>
-            updateProgress(dailyTasks, fill, count, percent)
-        );
-    });
-
-    card.append(header, stats, track, taskGrid);
-
-    updateProgress(dailyTasks, fill, count, percent);
-
-    if (!dailyPage) {
-        card.appendChild(
-            el("p", "workspace-empty", "Daily Tasks.md not found.")
-        );
-    }
-
-    return card;
-}
-
-// ---------- PROJECT CARD ----------
-
-function createProjectCard() {
-    const card = el("section", "workspace-card project-card");
-
-    const { header, count } =
-        createCardHeader("PERSONAL PROJECTS", "▤");
-
-    const allTasks = projects.flatMap(p => p.tasks);
-
-    const stats = el("div", "workspace-stats");
-    const percent = el("span", "workspace-percent", "0%");
-    const caption = el("span", "workspace-caption", "PROJECT COMPLETION");
-
-    stats.append(percent, caption);
-
-    const track = el("div", "workspace-progress-track");
-    const fill = el("div", "workspace-progress-fill project-fill");
-    track.appendChild(fill);
-
-    card.append(header, stats, track);
-
-    if (projects.length === 0) {
-        card.appendChild(
-            el("p", "workspace-empty", "No active projects found.")
-        );
-    }
-
-    projects.forEach(project => {
-        const section = el("div", "workspace-project");
-
-        const projectHeader = el("div", "workspace-project-header");
-        const name = el("span", "workspace-project-name", project.name);
-        const taskCount = el(
-            "span",
-            "workspace-project-count",
-            `${project.tasks.filter(t => t.completed).length}/${project.tasks.length}`
-        );
-
-        projectHeader.append(name, taskCount);
-
-        const taskGrid = el("div", "workspace-task-grid");
-
-        project.tasks.forEach(task => {
-            renderTask(task, taskGrid, () => {
-                taskCount.textContent =
-                    `${project.tasks.filter(t => t.completed).length}/${project.tasks.length}`;
-
-                updateProgress(allTasks, fill, count, percent);
-            });
-        });
-
-        section.append(projectHeader, taskGrid);
-        card.appendChild(section);
-    });
-
-    updateProgress(allTasks, fill, count, percent);
-
-    return card;
-}
-
-// ---------- RENDER ----------
-
-workspace.append(
-    createDailyCard(),
-    createProjectCard()
+header.append(
+    el("span", "project-deadline-title", "PROJECT DEADLINES"),
+    el("span", "project-deadline-count",
+        `${projects.length} ACTIVE`
+    )
 );
-```
 
+card.appendChild(header);
+
+
+// Project list
+projects.forEach(project => {
+
+    const item = el("div", "deadline-project");
+
+    const top = el("div", "deadline-project-top");
+
+    const name = el(
+        "span",
+        "deadline-project-name",
+        project.name
+    );
+
+    let statusText;
+    let statusClass;
+
+    if (project.daysLeft < 0) {
+        statusText = `${Math.abs(project.daysLeft)} DAYS OVERDUE`;
+        statusClass = "deadline-overdue";
+    } else if (project.daysLeft === 0) {
+        statusText = "DUE TODAY";
+        statusClass = "deadline-today";
+    } else {
+        statusText = `${project.daysLeft} DAYS LEFT`;
+        statusClass = project.daysLeft <= 7
+            ? "deadline-warning"
+            : "deadline-normal";
+    }
+
+    const badge = el(
+        "span",
+        `deadline-badge ${statusClass}`,
+        statusText
+    );
+
+    top.append(name, badge);
+
+
+    // Metadata
+    const meta = el("div", "deadline-project-meta");
+
+    const dateText = project.deadline.toFormat("dd MMM yyyy");
+
+    meta.append(
+        el("span", "", dateText),
+        el("span", "", `${project.priority.toUpperCase()} PRIORITY`),
+        el("span", "", `${project.progress}%`)
+    );
+
+
+    // Progress
+    const track = el("div", "deadline-progress-track");
+    const fill = el("div", "deadline-progress-fill");
+
+    fill.style.width =
+        `${Math.min(100, Math.max(0, project.progress))}%`;
+
+    track.appendChild(fill);
+
+
+    // Open project note
+    const link = el(
+        "button",
+        "deadline-open",
+        "OPEN PROJECT ↗"
+    );
+
+    link.addEventListener("click", async () => {
+        await app.workspace.openLinkText(
+            project.page.file.path,
+            "",
+            false
+        );
+    });
+
+    item.append(top, meta, track, link);
+
+    card.appendChild(item);
+});
+
+
+// Empty state
+if (projects.length === 0) {
+    card.appendChild(
+        el("p", "workspace-empty", "No active projects found.")
+    );
+}
+
+root.appendChild(card);
+```
