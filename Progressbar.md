@@ -814,7 +814,7 @@ workspace.append(
 
 ```
 ```dataviewjs
-const lessons = dv.pages('"Computer_Sciences/02_Areas/Course"')
+const lessons = dv.pages('"02_Areas/Course"')
     .where(p =>
         /^Lesson(-\d+)?.md$/i.test(p.file.name) &&
         p.status === "learning"
