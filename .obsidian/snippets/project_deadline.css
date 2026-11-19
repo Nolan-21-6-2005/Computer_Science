@@ -1,0 +1,119 @@
+
+.project-deadline-card {
+    padding: 14px 16px;
+    background: linear-gradient(110deg, #1e1c1b, #171717);
+    border: 1px solid #44352e;
+    border-radius: 4px;
+}
+
+.project-deadline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.project-deadline-title {
+    font-family: var(--font-monospace);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.project-deadline-count,
+.deadline-project-meta {
+    font-family: var(--font-monospace);
+    font-size: 9px;
+    color: var(--text-muted);
+}
+
+.deadline-project {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.deadline-project:last-child {
+    border-bottom: none;
+}
+
+.deadline-project-top,
+.deadline-project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.deadline-project-name {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.deadline-badge {
+    font-family: var(--font-monospace);
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.deadline-normal {
+    color: var(--text-muted);
+}
+
+.deadline-warning,
+.deadline-today {
+    color: #E9A34D;
+}
+
+.deadline-overdue {
+    color: #D66D65;
+}
+
+.deadline-project-meta {
+    margin-top: 7px;
+    flex-wrap: wrap;
+}
+
+.deadline-progress-track {
+    height: 4px;
+    margin-top: 9px;
+    background: var(--background-modifier-border);
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.deadline-progress-fill {
+    height: 100%;
+    background: var(--interactive-accent);
+    border-radius: 2px;
+}
+
+.deadline-open {
+    margin-top: 8px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: var(--font-monospace);
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.deadline-open:hover {
+    color: var(--interactive-accent);
+}
+
+
+/* Project button fill matches its card background */
+.deadline-open {
+    background: linear-gradient(110deg, #2a201d, #201b19) !important;
+    border: 1px solid #e58a61;
+    color: #e58a61;
+}
+
+.deadline-open:hover {
+    background: linear-gradient(110deg, #332520, #29201d) !important;
+    border-color: #f0a17d;
+    color: #f0a17d;
+}
