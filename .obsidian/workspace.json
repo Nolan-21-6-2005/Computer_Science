@@ -11,10 +11,14 @@
             "id": "bc751eebe7d08fbd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Progressbar.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Progressbar"
             }
           }
         ]
