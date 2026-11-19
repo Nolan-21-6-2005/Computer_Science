@@ -951,7 +951,7 @@ if (lessons.length > 0) {
 card.appendChild(current);
 ```
 ```dataviewjs
-const projects = dv.pages('"Computer_Sciences/01_Projects"')
+const projects = dv.pages('"01_Projects"')
     .where(p =>
         p.type === "project" &&
         p.status === "active" &&
