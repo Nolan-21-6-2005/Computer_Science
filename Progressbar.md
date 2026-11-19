@@ -67,7 +67,7 @@ root.innerHTML = `
 // ---------- CONFIGURATION ----------
 
 const SESSION_FOLDER =
-    '"Computer_Sciences/02_Areas/Work Sessions"';
+    '"02_Areas/Work Sessions"';
 
 // ---------- DATE RANGE: CURRENT WEEK ----------
 
@@ -341,8 +341,8 @@ if (kpis.length === 0) {
 // 1. CONFIGURATION
 // ============================================
 
-const SCHEDULE_PATH = "Computer_Sciences/02_Areas/Daily Schedule.md";
-const DAILY_TASK_PATH = "Computer_Sciences/02_Areas/Daily Tasks.md";
+const SCHEDULE_PATH = "02_Areas/Daily Schedule.md";
+const DAILY_TASK_PATH = "02_Areas/Daily Tasks.md";
 
 const root = dv.container;
 root.innerHTML = "";
@@ -814,7 +814,7 @@ workspace.append(
 
 ```
 ```dataviewjs
-const lessons = dv.pages('"Computer_Sciences/02_Areas/Course"')
+const lessons = dv.pages('"02_Areas/Course"')
     .where(p =>
         /^Lesson(-\d+)?.md$/i.test(p.file.name) &&
         p.status === "learning"
