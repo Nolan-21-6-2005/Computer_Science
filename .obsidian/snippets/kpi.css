@@ -1,0 +1,150 @@
+
+.study-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.study-kpi-card {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+
+    padding: 15px 13px 12px;
+    border: 1px solid #38312e;
+    border-radius: 4px;
+
+    background: #1c1c1c;
+    font-family: var(--font-monospace);
+
+    transition: border-color .2s, transform .2s;
+}
+
+.study-kpi-card:hover {
+    transform: translateY(-2px);
+    border-color: #8b614d;
+}
+
+/* Colored ambient glow */
+.study-kpi-card::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: -30px;
+    top: 15px;
+    border-radius: 50%;
+    filter: blur(35px);
+    opacity: .20;
+    pointer-events: none;
+}
+
+.study-kpi-card.orange::before {
+    background: #e66e45;
+}
+
+.study-kpi-card.green::before {
+    background: #58b879;
+}
+
+.study-kpi-card.purple::before {
+    background: #9875d5;
+}
+
+.study-kpi-card.yellow::before {
+    background: #d6ac51;
+}
+
+/* Header */
+.study-kpi-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #aaa09a;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* Status light */
+.study-kpi-status {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #71c982;
+    box-shadow: 0 0 9px #71c982;
+}
+
+/* Main number */
+.study-kpi-value {
+    position: relative;
+    margin-top: 13px;
+
+    color: #f0efec;
+    font-size: clamp(23px, 2.3vw, 32px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.study-kpi-value small {
+    margin-left: 4px;
+    font-size: 13px;
+    color: #aaa09a;
+}
+
+/* Footer */
+.study-kpi-footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+    margin-top: 9px;
+    color: #8eb88d;
+    font-size: 9px;
+    letter-spacing: .4px;
+}
+
+.study-kpi-footer span:last-child {
+    color: #8d8580;
+    text-align: right;
+}
+
+/* Mini progress */
+.study-kpi-track {
+    position: relative;
+    height: 3px;
+    margin-top: 10px;
+    background: #34302e;
+    overflow: hidden;
+}
+
+.study-kpi-track div {
+    height: 100%;
+    background: #e58a61;
+    box-shadow: 0 0 8px #e58a61;
+}
+
+.study-kpi-card.green .study-kpi-track div {
+    background: #72bd83;
+}
+
+.study-kpi-card.purple .study-kpi-track div {
+    background: #a68bd8;
+}
+
+.study-kpi-card.yellow .study-kpi-track div {
+    background: #d6b36a;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .study-kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

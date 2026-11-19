@@ -1,0 +1,179 @@
+/* Main container */
+.token-dashboard {
+    background: linear-gradient(
+        110deg,
+        #211b19,
+        #171717 65%,
+        #111
+    );
+
+    border: 1px solid #654332;
+    border-radius: 5px;
+
+    padding: 16px 18px;
+    margin: 10px 0;
+
+    box-shadow:
+        0 0 12px rgba(220, 105, 55, 0.08),
+        inset 0 0 15px rgba(255, 120, 60, 0.025);
+
+    font-family: var(--font-monospace);
+}
+
+/* Header */
+.token-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.token-heading {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #d98a65;
+}
+
+.token-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #ed8055;
+    border-radius: 50%;
+    margin-right: 8px;
+
+    box-shadow: 0 0 8px #ed8055;
+}
+
+.token-separator {
+    color: #77503d;
+    margin: 0 5px;
+}
+
+.token-live {
+    color: #e9a17d;
+    border: 1px solid #925c43;
+    padding: 3px 7px;
+    border-radius: 3px;
+}
+
+.token-pull {
+    color: #8d817b;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* Main progress layout */
+.token-main {
+    display: grid;
+    grid-template-columns: 75px minmax(100px, 1fr) 90px;
+    gap: 14px;
+    align-items: center;
+}
+
+/* Percentage */
+.token-percent {
+    font-family: var(--font-monospace);
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 900;
+    color: #e47d52;
+
+    text-shadow: 0 0 12px rgba(228, 125, 82, 0.3);
+}
+
+.token-percent span {
+    font-size: 19px;
+    margin-left: 2px;
+}
+
+/* Track */
+.token-track {
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #302a27 0px,
+            #302a27 5px,
+            #171717 5px,
+            #171717 10px
+        );
+
+    border: 1px solid #302b28;
+}
+
+/* Filled section */
+.token-fill {
+    height: 100%;
+    position: relative;
+
+    background: linear-gradient(
+        90deg,
+        #a9573b,
+        #e38b65,
+        #f3b18b
+    );
+
+    box-shadow:
+        0 0 12px rgba(239, 133, 87, 0.45),
+        0 0 25px rgba(239, 133, 87, 0.2);
+
+    transition: width 0.5s ease;
+}
+
+/* Scale */
+.token-ticks {
+    display: flex;
+    justify-content: space-between;
+
+    color: #776e68;
+    font-size: 9px;
+    padding-top: 7px;
+}
+
+/* Value */
+.token-value {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.token-value strong {
+    display: block;
+    color: #f0e9e4;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.token-value span {
+    color: #81756f;
+    font-size: 10px;
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    .token-main {
+        grid-template-columns: 55px minmax(70px, 1fr);
+        gap: 10px;
+    }
+
+    .token-percent {
+        font-size: 35px;
+    }
+
+    .token-value {
+        grid-column: 2;
+        text-align: right;
+    }
+
+    .token-track {
+        height: 24px;
+    }
+
+    .token-pull {
+        display: none;
+    }
+}

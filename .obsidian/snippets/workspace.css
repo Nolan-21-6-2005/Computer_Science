@@ -1,0 +1,326 @@
+
+/* =====================================
+   WORKSPACE GRID
+===================================== */
+
+.workspace-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 12px 0;
+    align-items: start;
+}
+
+/* =====================================
+   MAIN CARDS
+===================================== */
+
+.workspace-card {
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #44352e;
+    border-radius: 4px;
+    background: linear-gradient(145deg, #1e1c1b, #171717);
+    font-family: var(--font-monospace);
+    overflow: hidden;
+}
+
+.workspace-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #39312d;
+}
+
+.workspace-card-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #c9b9af;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.workspace-card-icon {
+    color: #df8963;
+    font-size: 15px;
+}
+
+.project-card .workspace-card-icon {
+    color: #8eb88d;
+}
+
+.workspace-count {
+    color: #99908a;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* =====================================
+   SCHEDULE
+   TWO ROWS - FOUR COLUMNS
+===================================== */
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px 14px;
+    padding-top: 10px;
+}
+
+/* 
+   DataviewJS creates two column containers.
+   display: contents allows their events to
+   participate directly in the parent grid.
+*/
+
+.schedule-column {
+    display: contents;
+}
+
+.schedule-event {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    min-width: 0;
+    padding: 3px 0;
+}
+
+.schedule-time {
+    flex: 0 0 auto;
+    color: #df8963;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.schedule-title {
+    min-width: 0;
+    color: #d1cbc5;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.schedule-event:hover .schedule-title {
+    color: #e58a61;
+}
+
+/* =====================================
+   PROGRESS
+===================================== */
+
+.workspace-stats {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 11px 0 8px;
+}
+
+.workspace-percent {
+    color: #e58a61;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.project-card .workspace-percent {
+    color: #8eb88d;
+}
+
+.workspace-caption {
+    color: #807873;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.workspace-progress-track {
+    width: 100%;
+    height: 4px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    background: #393330;
+}
+
+.workspace-progress-fill {
+    height: 100%;
+    width: 0%;
+    transition: width .25s ease;
+    background: linear-gradient(90deg, #a9573b, #e58a61);
+    box-shadow: 0 0 8px rgba(229, 138, 97, .5);
+}
+
+.project-fill {
+    background: linear-gradient(90deg, #547d5c, #8eb88d);
+    box-shadow: 0 0 8px rgba(142, 184, 141, .4);
+}
+
+/* =====================================
+   TWO-COLUMN TASK LIST
+===================================== */
+
+.workspace-task-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 14px;
+    row-gap: 9px;
+}
+
+.workspace-task {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 0;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* Square checkbox */
+
+.workspace-checkbox {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    display: inline-grid;
+    place-items: center;
+
+    box-sizing: border-box;
+    flex: 0 0 11px;
+
+    width: 11px;
+    height: 11px;
+    min-width: 11px;
+    min-height: 11px;
+
+    margin: 3px 0 0;
+    padding: 0;
+
+    border: 1px solid #77716c;
+    border-radius: 1px;
+
+    background: #171717;
+    cursor: pointer;
+}
+
+.workspace-checkbox:checked {
+    background: #df8963;
+    border-color: #df8963;
+}
+
+.project-card .workspace-checkbox:checked {
+    background: #8eb88d;
+    border-color: #8eb88d;
+}
+
+/* Small check mark */
+
+.workspace-checkbox:checked::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 6px;
+    margin: 4px auto;
+    border: solid #171717;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+}
+
+.workspace-checkbox:focus-visible {
+    outline: 1px solid #e58a61;
+    outline-offset: 3px;
+}
+
+.workspace-task-text {
+    min-width: 0;
+    color: #d1cbc5;
+    font-size: 11px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.workspace-task-text.is-completed {
+    color: #77716c;
+    text-decoration: line-through;
+}
+
+/* =====================================
+   PROJECT SECTIONS
+===================================== */
+
+.workspace-project {
+    padding: 10px 0;
+    border-top: 1px solid #39312d;
+}
+
+.workspace-project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.workspace-project-name {
+    color: #8eb88d;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.workspace-project-count {
+    color: #928b84;
+    font-size: 10px;
+}
+
+/* Empty state */
+
+.workspace-empty {
+    color: #827a74;
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+    .schedule-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    .workspace-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .workspace-task-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =====================================
+   EQUAL HEIGHT: SCHEDULE + DAILY TASKS
+===================================== */
+
+.workspace-grid {
+    align-items: stretch;
+}
+
+.schedule-card,
+.daily-card {
+    height: 100%;
+    box-sizing: border-box;
+    align-self: stretch;
+}

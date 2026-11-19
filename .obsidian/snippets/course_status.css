@@ -1,0 +1,283 @@
+
+/* =================================
+   COURSE STATUS
+================================= */
+
+.course-status {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin: 12px 0;
+    overflow: hidden;
+
+    background: linear-gradient(145deg, #1d1b1a, #151515);
+    border: 1px solid #49352c;
+    border-radius: 4px;
+
+    font-family: var(--font-monospace);
+}
+
+/* HEADER */
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #39312d;
+}
+
+.course-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #cbbdb4;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.course-icon {
+    color: #e58a61;
+    font-size: 19px;
+}
+
+.course-status-badge {
+    padding: 4px 9px;
+    border: 1px solid #8eb88d;
+    border-radius: 2px;
+
+    color: #8eb88d;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* CURRENT LESSON */
+
+.current-lesson {
+    margin-top: 12px;
+    padding: 14px;
+
+    background: linear-gradient(110deg, #2a201d, #201b19);
+    border: 1px solid #624333;
+    border-radius: 3px;
+}
+
+.course-meta,
+.course-info,
+.course-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.course-label {
+    color: #e58a61;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.course-number {
+    color: #99908a;
+    font-size: 9px;
+}
+
+.course-info {
+    margin: 10px 0;
+}
+
+.course-info-left {
+    min-width: 0;
+}
+
+.course-lesson-name {
+    color: #eee6df;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.course-name {
+    margin-top: 5px;
+    color: #9b918a;
+    font-size: 10px;
+}
+
+.course-info-right {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.course-percentage {
+    color: #e58a61;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.course-caption {
+    color: #93877e;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+/* PROGRESS BAR */
+
+.course-progress-track {
+    height: 6px;
+    width: 100%;
+    overflow: hidden;
+    background: #423630;
+    border-radius: 2px;
+}
+
+.course-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #a9573b, #e58a61);
+    box-shadow: 0 0 9px rgba(229, 138, 97, .45);
+    transition: width .3s ease;
+}
+
+.course-bottom {
+    margin-top: 9px;
+}
+
+.course-duration {
+    color: #9a9089;
+    font-size: 9px;
+}
+
+.course-open {
+    color: #e5a17e;
+    font-size: 9px;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+
+.course-open:hover,
+.course-history:hover {
+    color: #fff;
+}
+
+/* PLAYLIST */
+
+.playlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0 9px;
+}
+
+.playlist-title {
+    color: #cbbdb4;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.playlist-platform {
+    color: #93877e;
+    font-size: 9px;
+}
+
+.course-playlist {
+    width: 100%;
+    aspect-ratio: 16 / 5;
+    min-height: 190px;
+    overflow: hidden;
+    background: #101010;
+    border: 1px solid #39312d;
+    border-radius: 3px;
+}
+
+.course-playlist iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+.course-empty {
+    padding: 15px;
+    color: #999;
+    font-size: 11px;
+}
+
+/* FOOTER */
+
+.course-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 11px;
+}
+
+.course-history {
+    color: #8eb88d;
+    font-size: 9px;
+    letter-spacing: .7px;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .course-lesson-name {
+        font-size: 14px;
+    }
+
+    .course-info {
+        align-items: flex-start;
+    }
+
+    .course-playlist {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* Inactive course status */
+
+.course-status-badge.course-inactive {
+    color: #99918a;
+    border-color: #625b55;
+}
+
+/* Empty progress */
+
+.course-progress-fill.course-no-progress {
+    width: 0 !important;
+    box-shadow: none;
+}
+
+/* Empty state text */
+
+.course-empty-label {
+    color: #77716c;
+    font-size: 9px;
+    letter-spacing: .7px;
+}
+
+/* Keep current lesson rectangle visible */
+
+.current-lesson {
+    display: block;
+    width: 100%;
+    min-height: 110px;
+    box-sizing: border-box;
+}
+
+
+/* Button background matches the Current Lesson panel */
+.course-open,
+.course-history {
+    background: linear-gradient(110deg, #2a201d, #201b19) !important;
+    border: 1px solid #e58a61;
+    color: #e58a61;
+}
+
+.course-open:hover,
+.course-history:hover {
+    background: linear-gradient(110deg, #332520, #29201d) !important;
+    border-color: #f0a17d;
+    color: #f0a17d;
+}
