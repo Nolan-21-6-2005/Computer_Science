@@ -20,7 +20,7 @@ $$3 \times 3 \times 3$$Tức là mỗi Filter có:
 - Một Kernel $3 \times 3$ xử lý kênh G.
 - Một Kernel $3 \times 3$ xử lý kênh B.
 
-![[yibNN2CoGF9zPvHlIvWq56S6t9psBfP_qRBQCxoQC7of6eSFyJVKH_VvFlW8kK65UZZHa_n9bQltioHC6ZcRuJsWpZcX0qqr_eNy74IEQSHHwda0ABeNsMBGIs1f6cClN6z0tGKerfhHFIfUT7ufl6BTPIMDwt74Wq0dRapGAHlbcmex_5DfJXF3TZ3jTWZK.jpg]]
+![[CNN.jpg]]
 
 Với Filter thứ nhất:
 
