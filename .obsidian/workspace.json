@@ -250,17 +250,20 @@
   "active": "6470fdfe46ec5371",
   "lastOpenFiles": [
     "03_Resources/Convolution Neural Networks.md",
+    "01_Projects/Dust Collector.md",
+    "Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào.md",
+    "Sự thay đổi của feature map sau các lớp tích chập.md",
+    "Sự thay đổi của số kênh và feature map sau các lớp tích chập.md",
+    "Progressbar.md",
+    "yibNN2CoGF9zPvHlIvWq56S6t9psBfP_qRBQCxoQC7of6eSFyJVKH_VvFlW8kK65UZZHa_n9bQltioHC6ZcRuJsWpZcX0qqr_eNy74IEQSHHwda0ABeNsMBGIs1f6cClN6z0tGKerfhHFIfUT7ufl6BTPIMDwt74Wq0dRapGAHlbcmex_5DfJXF3TZ3jTWZK.jpg",
     "Cách mạng neuron tích chập hoạt động.md",
     "Excalidraw/Drawing 2026-11-20 09.34.41.excalidraw.md",
-    "Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào.md",
     "Pasted image 20261120104011.png",
-    "Progressbar.md",
     "convSobel-1639002689.gif",
     "Làm thế nào neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
     "Excalidraw/Drawing 2026-11-12 07.48.55.excalidraw.md",
     "03_Resources/dataviewjs clickable button.md",
     "03_Resources/Untitled",
-    "01_Projects/Dust Collector.md",
     "conflict-files-obsidian-git.md",
     "Habit tracker.md",
     "Excalidraw/Libraries/local-library.excalidrawlib",
@@ -286,7 +289,6 @@
     "03_Resources",
     "02_Areas/Work Sessions/Computer Vision.md",
     "02_Areas/Daily/2026-11-01.md",
-    "02_Areas/Course/Lesson-01.md.md",
-    "02_Areas/Daily Tasks.md"
+    "02_Areas/Course/Lesson-01.md.md"
   ]
 }
