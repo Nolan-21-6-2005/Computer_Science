@@ -16,7 +16,6 @@ Lớp đầu tiên (dựa trên loại ảnh):
 | Ảnh RGBA      | 4              |
 Ví dụ:
  $$Input = 224 \times 224 \times 3$$
-
 Vậy lớp đầu tiên nhận 3 kênh.
 # Link
 - [[Sự thay đổi của feature map sau các lớp tích chập]]

@@ -8,6 +8,6 @@ Là một mạng neuron học sâu gồm:
 - Dense layer(fully connected layer): Dùng để học các đặc trưng được trích xuất từ ảnh.
 # Link
 
-- [[Làm thế nào neural network biết được nó cần nhận biết các đặc trưng gì của ảnh]] ?
+- [[Cách neural network biết được nó cần nhận biết các đặc trưng gì của ảnh]] ?
 - [[Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào]] ?
 - [[Cách mạng neuron tích chập hoạt động]] ?
