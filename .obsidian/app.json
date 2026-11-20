@@ -1,4 +1,9 @@
 {
-  "readableLineLength": false,
-  "showInlineTitle": false
+  "readableLineLength": true,
+  "showInlineTitle": false,
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "./Attachments",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00_Inboxs"
 }
