@@ -10,3 +10,4 @@ Là một mạng neuron học sâu gồm:
 
 - [[Làm thế nào neural network biết được nó cần nhận biết các đặc trưng gì của ảnh]] ?
 - [[Vì sao số kênh màu phụ thuộc vào giá trị số của bộ lọc]] ?
+- [[Cách mạng neuron tích chập hoạt động]] ?
