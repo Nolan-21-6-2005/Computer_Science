@@ -6,7 +6,7 @@ Là một mạng neuron học sâu gồm:
 - Convolution layer: Dùng đề trích xuất đặc trưng của ảnh.
 - Max_pooling: Dùng để nhận biết các đặc trưng theo mục tiêu được đề ra trước đó.
 - Dense layer(fully connected layer): Dùng để học các đặc trưng được trích xuất từ ảnh.
-
 # Link
 
 - [[Làm thế nào neural network biết được nó cần nhận biết các đặc trưng gì của ảnh]] ?
+- [[Vì sao số kênh màu phụ thuộc vào giá trị số của bộ lọc]] ?

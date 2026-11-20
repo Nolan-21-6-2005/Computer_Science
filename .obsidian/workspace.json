@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Resources/Convolution Neural Networks.md",
+                "file": "Làm thế nào neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Convolution Neural Networks"
+              "title": "Làm thế nào neural network biết được nó cần nhận biết các đặc trưng gì của ảnh"
             }
           },
           {
@@ -188,7 +188,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Resources/Convolution Neural Networks.md",
+                "file": "Làm thế nào neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -235,12 +235,13 @@
   },
   "active": "1ff85732f0b8e207",
   "lastOpenFiles": [
+    "Progressbar.md",
+    "Làm thế nào neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
+    "03_Resources/Convolution Neural Networks.md",
     "Excalidraw/Drawing 2026-11-20 09.34.41.excalidraw.md",
     "Excalidraw/Drawing 2026-11-12 07.48.55.excalidraw.md",
-    "03_Resources/Convolution Neural Networks.md",
     "03_Resources/dataviewjs clickable button.md",
     "03_Resources/Untitled",
-    "Progressbar.md",
     "01_Projects/Dust Collector.md",
     "conflict-files-obsidian-git.md",
     "Habit tracker.md",
@@ -271,7 +272,6 @@
     "02_Areas/Daily Tasks.md",
     "02_Areas/Daily Schedule.md",
     "01_Projects/Life OS - Obsidian.md",
-    "01_Projects/Graph Neural Network x Problem Solving by Search.md",
-    "01_Projects/EduWatch.md"
+    "01_Projects/Graph Neural Network x Problem Solving by Search.md"
   ]
 }
