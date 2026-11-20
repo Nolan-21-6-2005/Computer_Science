@@ -12,7 +12,7 @@ Cần tổ chức dữ liệu thành dạng bảng cùng với nhãn tương ứ
 | Ảnh 1       | Cat          |
 | Ảnh 2       | Dog          |
 | Ảnh 3       | Bird         |
-- Đối với bài toán nhận diện vật thể thì có thêm bounding box
+- Đối với bài toán nhận diện vật thể thì có thêm bounding box:
 
 | Ảnh đầu vào | Nhãn (Label) | Bounding box |
 | ----------- | ------------ | ------------ |
