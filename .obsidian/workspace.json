@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Resources/Cách tính Gini Index.md",
+                "file": "03_Resources/Cách tính Gini Index cho từng ngưỡng.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cách tính Gini Index"
+              "title": "Cách tính Gini Index cho từng ngưỡng"
             }
           },
           {
@@ -198,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Resources/Cách tính Gini Index.md",
+                "file": "03_Resources/Cách tính Gini Index cho từng ngưỡng.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -247,7 +247,7 @@
   "lastOpenFiles": [
     "00_Inboxs/selected.md",
     "00_Inboxs/Untitled 1.md",
-    "03_Resources/Cách tính Gini Index.md",
+    "03_Resources/Cách tính Gini Index cho từng ngưỡng.md",
     "03_Resources/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
     "01_Projects/Dust Collector.md",
     "03_Resources/Convolution Neural Networks.md",

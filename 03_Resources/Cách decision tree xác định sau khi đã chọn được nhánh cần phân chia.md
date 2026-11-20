@@ -32,7 +32,7 @@ Trong đó:
 - $p_i$: Tỷ lệ mẫu thuộc lớp thứ $i$.
 - $k$: Số lớp phân loại.
 
-Gini càng thấp thì nhóm dữ liệu càng thuần nhất ([[Cách tính Gini Index]]).
+Gini càng thấp thì nhóm dữ liệu càng thuần nhất ([[Cách tính Gini Index cho từng ngưỡng]]).
 ## So sánh các ngưỡng
 
 |Threshold|Gini sau phân chia|
