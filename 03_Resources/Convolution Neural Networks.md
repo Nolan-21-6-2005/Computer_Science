@@ -9,5 +9,5 @@ Là một mạng neuron học sâu gồm:
 # Link
 
 - [[Làm thế nào neural network biết được nó cần nhận biết các đặc trưng gì của ảnh]] ?
-- [[Vì sao số kênh màu phụ thuộc vào giá trị số của bộ lọc]] ?
+- [[Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào]] ?
 - [[Cách mạng neuron tích chập hoạt động]] ?
