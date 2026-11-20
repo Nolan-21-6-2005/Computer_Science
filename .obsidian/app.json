@@ -1,4 +1,5 @@
 {
   "readableLineLength": false,
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "trashOption": "local"
 }
