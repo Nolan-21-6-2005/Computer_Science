@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Resources/Convolution Neural Networks.md",
+                "file": "03_Resources/Cách tính Gini Index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Convolution Neural Networks"
+              "title": "Cách tính Gini Index"
             }
           },
           {
@@ -198,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Resources/Convolution Neural Networks.md",
+                "file": "03_Resources/Cách tính Gini Index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -245,11 +245,15 @@
   },
   "active": "1ff85732f0b8e207",
   "lastOpenFiles": [
+    "00_Inboxs/selected.md",
+    "00_Inboxs/Untitled 1.md",
+    "03_Resources/Cách tính Gini Index.md",
+    "03_Resources/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
+    "01_Projects/Dust Collector.md",
+    "03_Resources/Convolution Neural Networks.md",
     "03_Resources/Habit tracker.md",
     "03_Resources/Cách neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
     "03_Resources/Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào.md",
-    "03_Resources/Convolution Neural Networks.md",
-    "01_Projects/Dust Collector.md",
     "03_Resources/Sự thay đổi của feature map sau các lớp tích chập.md",
     "Sự thay đổi của số kênh và feature map sau các lớp tích chập.md",
     "Progressbar.md",
@@ -280,11 +284,7 @@
     "03_Resources/Excalidraw/Derivative.excalidraw.md",
     "03_Resources/Yêu cầu.md",
     "03_Resources/Streamlit.md",
-    "03_Resources/Góp ý 11-11-2026.md",
     "03_Resources/Excalidraw",
-    "03_Resources",
-    "02_Areas/Work Sessions/Computer Vision.md",
-    "02_Areas/Daily/2026-11-01.md",
-    "02_Areas/Course/Lesson-01.md.md"
+    "03_Resources"
   ]
 }
