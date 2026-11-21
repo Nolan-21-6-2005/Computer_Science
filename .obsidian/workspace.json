@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Progressbar.md",
+                "file": "03_Resources/Convolution Neural Networks.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Progressbar"
+              "title": "Convolution Neural Networks"
+            }
+          },
+          {
+            "id": "ff48ffcb913d29a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_Resources/Machine learning - Nhận dataset.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Machine learning - Nhận dataset"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.89999389648438,
-    "collapsed": true
+    "width": 255.89999389648438
   },
   "right": {
     "id": "4156926ec12609c0",
@@ -205,10 +219,22 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "bc751eebe7d08fbd",
+  "active": "ff48ffcb913d29a3",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "00_Inboxs/Thuật toán toán phân cụm hoạt động như thế nào với ảnh màu RGB.md",
+    "03_Resources/Machine learning - Nhận dataset.md",
+    "03_Resources/Convolution Neural Networks.md",
+    "00_Inboxs/Attachments/clustering_rgb.jpg",
+    "00_Inboxs/Attachments/rgb.jpg",
+    "00_Inboxs/Ứng dụng của thuật toán phân cụm trong thị giác máy tính.md",
+    "00_Inboxs/Attachments/clustering.jpg",
+    "00_Inboxs/Attachments",
+    "03_Resources/Clustering.md",
+    "03_Resources/Attachments/thuat-toan-phan-cum.jpg",
+    "03_Resources/Attachments",
+    "02_Areas/Góp ý 11-11-2026.md",
     "Progressbar.md",
+    "conflict-files-obsidian-git.md",
     "Excalidraw/Drawing 2026-11-20 09.34.41.excalidraw.md",
     "Attachments/convSobel-1639002689.gif",
     "Attachments/CNN.jpg",
@@ -220,7 +246,6 @@
     "03_Resources/Cách neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
     "03_Resources/Cách mạng neuron tích chập hoạt động.md",
     "03_Resources/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
-    "03_Resources/Convolution Neural Networks.md",
     "Habit tracker.md",
     "Excalidraw/Libraries/local-library.excalidrawlib",
     "Excalidraw/Libraries",
@@ -239,13 +264,6 @@
     "03_Resources/Excalidraw/Machine Learning.excalidraw.md",
     "03_Resources/Excalidraw/Libraries",
     "03_Resources/Excalidraw/Derivative.excalidraw.md",
-    "03_Resources/Yêu cầu.md",
-    "03_Resources/Untitled 1.md",
-    "03_Resources/Streamlit.md",
-    "03_Resources/Góp ý 11-11-2026.md",
-    "03_Resources/Excalidraw",
-    "03_Resources",
-    "02_Areas/Work Sessions/Computer Vision.md",
-    "02_Areas/Work Sessions"
+    "03_Resources/Excalidraw"
   ]
 }
