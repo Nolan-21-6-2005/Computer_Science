@@ -43,12 +43,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Progressbar.md",
+                "file": "01 Daily Notes/2026-11-22.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Progressbar"
+              "title": "2026-11-22"
             }
           }
         ],
@@ -146,7 +146,7 @@
         }
       }
     ],
-    "currentTab": 4
+    "currentTab": 0
   },
   "right": {
     "id": "c5efa7a22861fd02",
@@ -158,7 +158,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Progressbar.md",
+            "file": "01 Daily Notes/2026-11-22.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -214,11 +214,13 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "a905cbe6ecc0f1fd",
+  "active": "432579de831b6349",
   "lastOpenFiles": [
-    "03_Resources/Cách mạng neuron tích chập hoạt động.md",
-    "Resources.base",
     "Progressbar.md",
+    "01 Daily Notes/2026-11-22.md",
+    "01 Daily Notes",
+    "Resources.base",
+    "03_Resources/Cách mạng neuron tích chập hoạt động.md",
     "03_Resources/Habit tracker.md",
     "03_Resources/dataviewjs clickable button.md",
     "03_Resources/Sự thay đổi của feature map sau các lớp tích chập.md",
@@ -257,7 +259,6 @@
     "Excalidraw/Computer Memory.excalidraw.md",
     "Excalidraw/Libraries/local-library.excalidrawlib",
     "Excalidraw/Libraries",
-    "Caculus/Logarithms - hàm ngược của số mũ.md",
     "Journaling"
   ]
 }
