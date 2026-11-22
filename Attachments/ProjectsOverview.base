@@ -1,6 +1,6 @@
 views:
   - type: table
-    name: View
+    name: Project
     filters:
       and:
         - file.folder == "01_Projects"
@@ -15,3 +15,17 @@ views:
       file.name: 325
       note.status: 70
       note.priority: 186
+  - type: cards
+    name: Working Session
+    filters:
+      and:
+        - file.folder == "02_Areas/Work Sessions"
+    order:
+      - file.name
+      - date
+      - type
+      - category
+      - start
+      - end
+    cardSize: 240
+    imageAspectRatio: 1
