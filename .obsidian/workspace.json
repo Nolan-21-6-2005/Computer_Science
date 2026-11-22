@@ -11,10 +11,14 @@
             "id": "bc751eebe7d08fbd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Dashboard.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Dashboard"
             }
           },
           {
@@ -99,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.89999389648438
+    "width": 255.89999389648438,
+    "collapsed": true
   },
   "right": {
     "id": "4156926ec12609c0",
@@ -222,7 +227,15 @@
   },
   "active": "bc751eebe7d08fbd",
   "lastOpenFiles": [
+    "99_System/Bases/Inbox.base",
     "Dashboard.md",
+    "99_System/Excalidraw/Computer Memory.excalidraw.md",
+    "04_Logs/Sessions/2026-11-23_00-54_deep_work.md",
+    "02_Projects/EduWatch.md",
+    "99_System/Excalidraw/Transformer.excalidraw.md",
+    "99_System/Snippets/dataviewjs clickable button.md",
+    "99_System/Snippets/New Project Button.md",
+    "99_System/Excalidraw/Derivative.excalidraw.md",
     "05_Reviews/Weekly/2026-W48.md",
     "05_Reviews/Weekly/2026-W47.md",
     "05_Reviews/Weekly",
@@ -244,20 +257,12 @@
     "03_Learning/Notes/Computer_Vision/Sự thay đổi của feature map sau các lớp tích chập.md",
     "03_Learning/Notes/Computer_Vision/Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào.md",
     "03_Learning/Notes/Computer_Vision/Cách neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
-    "03_Learning/Notes/Computer_Vision/Cách mạng neuron tích chập hoạt động.md",
-    "03_Learning/Notes/Computer_Vision/Convolution Neural Networks.md",
-    "03_Learning/Courses/Computer_Vision/Lesson-01.md",
     "03_Learning/Notes/Tools",
     "03_Learning/Notes/Machine_Learning",
     "03_Learning/Notes/General",
     "03_Learning/Notes/Computer_Vision",
     "03_Learning/Courses/Computer_Vision",
     "03_Learning/Notes",
-    "02_Projects/Dust Collector.md",
-    "02_Projects/Graph Neural Network x Problem Solving by Search.md",
-    "02_Projects/Life OS - Obsidian.md",
-    "02_Projects/EduWatch.md",
-    "01_Daily/Notes/2026-11-23.md",
     "99_System/Attachments/clustering.jpg",
     "99_System/Attachments/thuat-toan-phan-cum.jpg",
     "99_System/Attachments/rgb.jpg",
