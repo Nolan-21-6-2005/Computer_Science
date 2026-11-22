@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "ff48ffcb913d29a3",
+            "id": "281c7336fc4fd47a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,16 +33,6 @@
               },
               "icon": "lucide-file",
               "title": "Progressbar"
-            }
-          },
-          {
-            "id": "281c7336fc4fd47a",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
             }
           }
         ],
@@ -229,19 +219,23 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ff48ffcb913d29a3",
+  "active": "281c7336fc4fd47a",
   "lastOpenFiles": [
-    "Attachments/ProjectsOverview.base",
+    "Attachments/VaultCleanup.base",
     "Progressbar.md",
+    "03_Resources/Convolution Neural Networks.md",
+    "00 Inbox/Inbox.md",
+    "00 Inbox/Ideas/2026-11-22-20-20-30.md",
+    "00 Inbox/Ideas",
+    "Attachments/Inboxs.base",
+    "Attachments/ProjectsOverview.base",
     "01_Projects/EduWatch.md",
     "01_Projects/Graph Neural Network x Problem Solving by Search.md",
     "01_Projects/Life OS - Obsidian.md",
     "01_Projects/Dust Collector.md",
-    "03_Resources/Convolution Neural Networks.md",
     "01_Projects/Untitled.md",
     "01_Projects/Untitled 1.md",
     "03 Projects/Projects Overview.base",
-    "00 Inbox/Inbox.md",
     "00 Inbox",
     "03 Projects/Projects Overview.md",
     "05 Tasks/Work Sessions/2026-11-22-18-38-04.md",
@@ -251,8 +245,6 @@
     "06 Reviews/Vault Cleanup.md",
     "06 Reviews",
     "01 Daily Notes/2026-11-22.md",
-    "01 Daily Notes",
-    "Resources.base",
     "03_Resources/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
     "02_Areas/Course/Lesson-01.md.md",
     "03_Resources/Machine learning - Nhận dataset.md",
@@ -264,12 +256,10 @@
     "00_Inboxs/Attachments/rgb.jpg",
     "00_Inboxs/Ứng dụng của thuật toán phân cụm trong thị giác máy tính.md",
     "00_Inboxs/Attachments/clustering.jpg",
-    "00_Inboxs/Attachments",
     "03_Resources/Clustering.md",
     "03_Resources/Attachments/thuat-toan-phan-cum.jpg",
     "02_Areas/Góp ý 11-11-2026.md",
     "conflict-files-obsidian-git.md",
-    "Excalidraw/Drawing 2026-11-20 09.34.41.excalidraw.md",
     "Attachments/convSobel-1639002689.gif",
     "Attachments/CNN.jpg",
     "Attachments/Pasted image 20261112075541.png",
