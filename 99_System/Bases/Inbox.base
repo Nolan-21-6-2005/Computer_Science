@@ -1,0 +1,12 @@
+views:
+  - type: cards
+    name: Inbox
+    filters:
+      and:
+        - file.inFolder("00_Inbox")
+    order:
+      - file.name
+      - type
+      - status
+      - created
+    cardSize: 220

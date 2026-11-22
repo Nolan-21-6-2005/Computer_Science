@@ -1,0 +1,30 @@
+views:
+  - type: table
+    name: Project
+    filters:
+      and:
+        - file.inFolder("02_Projects")
+    order:
+      - file.name
+      - deadline
+      - start_date
+      - status
+      - priority
+      - progress
+    columnSize:
+      file.name: 325
+      note.status: 70
+      note.priority: 186
+  - type: cards
+    name: Working Session
+    filters:
+      and:
+        - file.inFolder("04_Logs/Sessions")
+    order:
+      - file.name
+      - date
+      - category
+      - start
+      - end
+      - duration_minutes
+    cardSize: 240

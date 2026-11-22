@@ -1,0 +1,14 @@
+views:
+  - type: cards
+    name: Project Cards
+    filters:
+      and:
+        - file.inFolder("02_Projects")
+    order:
+      - file.name
+      - status
+      - deadline
+      - start_date
+    cardSize: 220
+    image: note.images
+    imageAspectRatio: 0.85
