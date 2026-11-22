@@ -1,11 +1,12 @@
 # Daily Schedule
 
-- 08:00 | Gym
-- 09:30 | Short-form video
+- 07:00 | Watering
+- 08:00 | Do Excercise
+- 08:30 | Coding
 - 11:30 | Lunch
-- 12:30 | Long-form video edit
-- 15:30 | Buffer
-- 16:00 | Skool email
-- 16:15 | Streaming / go live
-- 18:15 | Ops block 2
+- 14:30 | Gym
+- 18:00 | End Sesssion
+- 19:00 | World Buidling
+- 20:00 | Reading book
+- 21:00 | End Session
 
