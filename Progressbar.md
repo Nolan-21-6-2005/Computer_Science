@@ -344,7 +344,7 @@ async function openBase(path) {
 const CONFIG = {
     dailyFolder: "01 Daily Notes",
     ideaFolder: "00 Inbox/Ideas",
-    learningFolder: "02_Area/Learning",
+    learningFolder: "02_Areas/Learning",
     projectBase: "Attachments/ProjectsOverview.base",
     inboxBase: "Attachments/Inboxs.base",
     weeklyFolder: "06 Reviews/Weekly",
@@ -688,7 +688,6 @@ createButton(
     }
 );
 ```
-
 
 ```dataviewjs
 
