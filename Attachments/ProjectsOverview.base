@@ -1,0 +1,17 @@
+views:
+  - type: table
+    name: View
+    filters:
+      and:
+        - file.folder == "01_Projects"
+    order:
+      - file.name
+      - deadline
+      - start_date
+      - type
+      - status
+      - priority
+    columnSize:
+      file.name: 325
+      note.status: 70
+      note.priority: 186

@@ -11,17 +11,10 @@
             "id": "2b09965eab6923e3",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Mathematics.canvas",
-                "viewState": {
-                  "x": -187.76195140867662,
-                  "y": -1411.4453319565052,
-                  "zoom": -1.2227134153535608
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Mathematics"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           },
           {
@@ -41,17 +34,17 @@
             "id": "a905cbe6ecc0f1fd",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Resources.base",
-                "viewName": "03 - Resources"
+                "file": "01 Daily Notes/2026-11-22.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-grid",
-              "title": "Resources"
+              "icon": "lucide-file",
+              "title": "2026-11-22"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -145,7 +138,7 @@
         }
       }
     ],
-    "currentTab": 4
+    "currentTab": 0
   },
   "right": {
     "id": "c5efa7a22861fd02",
@@ -157,7 +150,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Resources.base",
+            "file": "01 Daily Notes/2026-11-22.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -213,10 +206,28 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "a905cbe6ecc0f1fd",
+  "active": "2b09965eab6923e3",
   "lastOpenFiles": [
+    "Attachments/VaultCleanup.base",
+    "Attachments/ProjectsOverview.base",
+    "Attachments/Inboxs.base",
+    "06 Reviews/Weekly/2026-W47.md",
+    "06 Reviews/Weekly",
+    "06 Reviews",
+    "05 Tasks/Work Sessions/2026-11-22-20-40-22.md",
+    "05 Tasks/Work Sessions/2026-11-22-18-38-04.md",
+    "05 Tasks/Work Sessions",
+    "05 Tasks",
+    "03 Projects/Projects Overview.md",
+    "03 Projects/Projects Overview.base",
+    "03 Projects",
+    "00 Inbox/Ideas/2026-11-22-20-48-27.md",
+    "00 Inbox/Ideas/2026-11-22-20-24-10.md",
+    "00 Inbox/Ideas",
+    "00 Inbox",
     "Progressbar.md",
-    "Resources.base",
+    "01 Daily Notes/2026-11-22.md",
+    "03_Resources/Cách mạng neuron tích chập hoạt động.md",
     "03_Resources/Habit tracker.md",
     "03_Resources/dataviewjs clickable button.md",
     "03_Resources/Sự thay đổi của feature map sau các lớp tích chập.md",
@@ -233,15 +244,8 @@
     "Excalidraw/Derivative.excalidraw.md",
     "Mathematics.canvas",
     "Giá trị số của máy tính.md",
-    "YTDown.com_Shorts_The-definition-of-a-derivative_Media_PGK-RXA8Ye8_002_720p.mp4",
     "Probobility & Statistic/MAP — Maximum A Posteriori.md",
-    "Probobility & Statistic/Bayesian.md",
-    "Excalidraw/Drawing 2026-08-27 09.22.24.excalidraw.md",
-    "Journaling/2026-08-31.md",
     "Lập trình.canvas",
-    "Data Structure & Algorithms.md",
-    "Độ phức tạp của thuật toán.md",
-    "Đối tượng.md",
     "Attachments/images (12).jpeg",
     "Attachments/identity.png",
     "Attachments/dot product.png",
@@ -251,11 +255,6 @@
     "Attachments/0b06645f-2766-495a-aa8a-bbc196a8be18_K-Means+Clustering+-+Emcord.webp",
     "Attachments/2208_w048_n005_283b_p1_283.jpg",
     "Attachments/images (11).jpeg",
-    "Attachments/images.png",
-    "Excalidraw/Computer Memory.excalidraw.md",
-    "Excalidraw/Libraries/local-library.excalidrawlib",
-    "Excalidraw/Libraries",
-    "Caculus/Logarithms - hàm ngược của số mũ.md",
-    "Journaling"
+    "Attachments/images.png"
   ]
 }

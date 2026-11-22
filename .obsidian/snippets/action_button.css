@@ -1,0 +1,119 @@
+/* =================================
+   COMMAND CENTER - ACTION CENTER
+================================= */
+
+.cc-action-button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 72px;
+    padding: 13px 16px;
+
+    background: #242424;
+    border: 1px solid #3b3936;
+    border-radius: 3px;
+
+    color: #dedbd5;
+    text-align: left;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cc-action-button:hover {
+    background: #302b27;
+    border-color: #bd7653;
+    transform: translateY(-2px);
+}
+
+.cc-action-button:active {
+    transform: translateY(0);
+}
+
+/* Icon */
+
+.cc-action-icon {
+    color: #d78660;
+    font-size: 17px;
+    line-height: 1;
+    margin-bottom: 7px;
+}
+
+/* Title */
+
+.cc-action-title {
+    color: #e6e1da;
+    font-family: var(--font-monospace);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+}
+
+/* Description */
+
+.cc-action-desc {
+    color: #89847d;
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+/* Arrow */
+
+.cc-action-arrow {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+
+    color: #77716a;
+    font-size: 12px;
+
+    transition: color 0.2s ease;
+}
+
+.cc-action-button:hover .cc-action-arrow {
+    color: #e69a70;
+}
+
+/* Loading state */
+
+.cc-action-button.is-loading {
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+/* 4 CỘT x 2 HÀNG; khung hẹp thì còn 2 cột */
+
+.cc-action-wrap {
+    container-type: inline-size;   /* đo theo bề rộng khung chứa, không phải cả cửa sổ */
+    width: 100%;
+}
+
+.cc-action-grid {
+    --cc-columns: 4;
+    display: grid;
+    grid-template-columns: repeat(var(--cc-columns), minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+}
+
+@container (max-width: 600px) {
+    .cc-action-grid {
+        --cc-columns: 2;
+        gap: 6px;
+    }
+
+    .cc-action-button {
+        padding: 10px;
+        min-height: 72px;
+    }
+
+    .cc-action-title { font-size: 9px; }
+    .cc-action-desc  { font-size: 8px; }
+}

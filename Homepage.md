@@ -57,6 +57,7 @@ root.innerHTML = `
     </div>
 `;
 ```
+
 ```dataviewjs
 
 // ==========================================
@@ -327,6 +328,367 @@ if (kpis.length === 0) {
 }
 
 ```
+
+```dataviewjs
+async function openBase(path) {
+    const file = app.vault.getAbstractFileByPath(path);
+
+    if (!file) {
+        new Notice(`Base file not found: ${path}`);
+        return;
+    }
+
+    await app.workspace.getLeaf(false).openFile(file);
+}
+
+const CONFIG = {
+    dailyFolder: "01 Daily Notes",
+    ideaFolder: "00 Inbox/Ideas",
+    learningFolder: "02_Areas/Course",
+    projectBase: "Attachments/ProjectsOverview.base",
+    inboxBase: "Attachments/Inboxs.base",
+    weeklyFolder: "06 Reviews/Weekly",
+    cleanupBase: "Attachments/VaultCleanup.base",
+    sessionFolder: "05 Tasks/Work Sessions",
+};
+
+// ---------- UTILITIES ----------
+
+const container = dv.container;
+container.innerHTML = "";
+
+// Khung bọc + lưới chứa các nút (CSS dùng 2 class này để chia cột)
+const wrap = document.createElement("div");
+wrap.className = "cc-action-wrap";
+
+const grid = document.createElement("div");
+grid.className = "cc-action-grid";
+
+wrap.appendChild(grid);
+container.appendChild(wrap);
+
+const moment = window.moment;
+const today = moment().format("YYYY-MM-DD");
+const week = moment().format("GGGG-[W]WW");
+const now = moment();
+
+async function ensureFolder(path) {
+    const parts = path.split("/");
+    let current = "";
+
+    for (const part of parts) {
+        current = current ? `${current}/${part}` : part;
+
+        if (!app.vault.getAbstractFileByPath(current)) {
+            try {
+                await app.vault.createFolder(current);
+            } catch (e) {}
+        }
+    }
+}
+
+async function openOrCreate(path, content = "") {
+    await ensureFolder(path.substring(0, path.lastIndexOf("/")));
+
+    let file = app.vault.getAbstractFileByPath(path);
+
+    if (!file) {
+        file = await app.vault.create(path, content);
+    }
+
+    const leaf = app.workspace.getLeaf(false);
+    await leaf.openFile(file);
+}
+
+function createButton(icon, title, description, action) {
+    const button = document.createElement("button");
+    button.className = "cc-action-button";
+
+    button.innerHTML = `
+        <span class="cc-action-icon">${icon}</span>
+        <span class="cc-action-title">${title}</span>
+        <span class="cc-action-desc">${description}</span>
+        <span class="cc-action-arrow">↗</span>
+    `;
+
+    button.addEventListener("click", async () => {
+        button.classList.add("is-loading");
+
+        try {
+            await action();
+        } catch (error) {
+            console.error(error);
+            new Notice("Action failed: " + error.message);
+        } finally {
+            button.classList.remove("is-loading");
+        }
+    });
+
+    grid.appendChild(button);
+}
+
+// ---------- ACTION 1: PLAN TODAY ----------
+
+createButton(
+    "◷",
+    "PLAN TODAY",
+    "Create daily plan",
+    async () => {
+        const path = `${CONFIG.dailyFolder}/${today}.md`;
+
+        const template = `---
+type: daily
+date: ${today}
+status: planned
+---
+
+# Daily Plan
+
+## Objectives
+- [ ]
+
+## Tasks
+- [ ]
+
+## Schedule
+
+## Reflection
+
+### Completed
+
+### Not Completed
+
+### Notes
+`;
+
+        await openOrCreate(path, template);
+    }
+);
+
+// ---------- ACTION 2: CAPTURE IDEA ----------
+
+createButton(
+    "✳",
+    "CAPTURE IDEA",
+    "Save a new idea",
+    async () => {
+        const timestamp = moment().format("HH-mm-ss");
+        const path = `${CONFIG.ideaFolder}/${today}-${timestamp}.md`;
+
+        const template = `---
+type: idea
+created: ${now.format("YYYY-MM-DD HH:mm")}
+status: inbox
+---
+
+# New Idea
+
+## Description
+
+## Related Projects
+
+## Notes
+`;
+
+        await openOrCreate(path, template);
+    }
+);
+
+// ---------- ACTION 3: START LEARNING ----------
+
+createButton(
+    "⌘",
+    "START LEARNING",
+    "Open active lesson",
+    async () => {
+        const lessons = dv.pages(`"${CONFIG.learningFolder}"`)
+            .where(p =>
+                p.status === "learning" &&
+                /^Lesson-\d+$/i.test(p.file.name)
+            )
+            .array()
+            .sort((a, b) =>
+                Number(a.lesson_number ?? 0) -
+                Number(b.lesson_number ?? 0)
+            );
+
+        if (!lessons.length) {
+            new Notice("No lesson has status: learning.");
+            return;
+        }
+
+        if (lessons.length > 1) {
+            new Notice("Multiple active lessons found. Opening the first one.");
+        }
+
+        const file = app.vault.getAbstractFileByPath(
+            lessons[0].file.path
+        );
+
+        await app.workspace.getLeaf(false).openFile(file);
+    }
+);
+
+// ---------- ACTION 4: PROJECT REVIEW ----------
+
+createButton(
+    "▤",
+    "PROJECT REVIEW",
+    "Review active projects",
+    async () => {
+        await openBase(CONFIG.projectBase);
+    }
+);
+
+
+// ---------- ACTION 5: WEEKLY REVIEW ----------
+
+createButton(
+    "▥",
+    "WEEKLY REVIEW",
+    "Review the past 7 days",
+    async () => {
+        const path = `${CONFIG.weeklyFolder}/${week}.md`;
+
+        const start = moment().startOf("isoWeek").format("YYYY-MM-DD");
+        const end = moment().endOf("isoWeek").format("YYYY-MM-DD");
+
+        const template = `---
+type: weekly-review
+week: ${week}
+start_date: ${start}
+end_date: ${end}
+status: reviewing
+---
+
+# Weekly Review
+
+## 1. Statistics
+
+### Deep Work
+
+### Completed Tasks
+
+### Learning Sessions
+
+## 2. Achievements
+
+## 3. Incomplete Tasks
+
+## 4. Reflection
+
+### What went well?
+
+### What went wrong?
+
+### What distracted me?
+
+## 5. Next Week
+
+### Priorities
+
+- [ ]
+
+### Improvements
+`;
+
+        await openOrCreate(path, template);
+    }
+);
+
+// ---------- ACTION 6: INBOX PROCESSING ----------
+
+createButton(
+    "▣",
+    "INBOX PROCESSING",
+    "Process unorganized notes",
+    async () => {
+        await openBase(CONFIG.inboxBase);
+    }
+);
+
+
+// ---------- ACTION 7: DEEP WORK ----------
+
+createButton(
+    "◉",
+    "DEEP WORK",
+    "Start / stop focus session",
+    async () => {
+        await ensureFolder(CONFIG.sessionFolder);
+
+        const activePath =
+            `${CONFIG.sessionFolder}/Active Session.md`;
+
+        let file = app.vault.getAbstractFileByPath(activePath);
+
+        // Stop current session
+        if (file) {
+            const fm = app.metadataCache.getFileCache(file)?.frontmatter;
+
+            if (fm?.status === "active") {
+                const startTime = moment(fm.start_time);
+                const endTime = moment();
+                const duration = Math.max(
+                    0,
+                    Math.round(endTime.diff(startTime, "seconds") / 60)
+                );
+
+                await app.fileManager.processFrontMatter(
+                    file,
+                    frontmatter => {
+                        frontmatter.status = "completed";
+                        frontmatter.end_time = endTime.format();
+                        frontmatter.duration_minutes = duration;
+                    }
+                );
+
+                const archivePath =
+                    `${CONFIG.sessionFolder}/${today}-${startTime.format("HH-mm-ss")}.md`;
+
+                await app.vault.rename(file, archivePath);
+
+                new Notice(`Deep Work completed: ${duration} minutes.`);
+                return;
+            }
+        }
+
+        // Start new session
+        const startTime = moment();
+
+        const template = `---
+type: work-session
+date: ${today}
+status: active
+focus: deep-work
+start_time: ${startTime.format()}
+duration_minutes: 0
+---
+
+# Deep Work Session
+
+## Objective
+
+## Notes
+`;
+
+        await app.vault.create(activePath, template);
+        new Notice("Deep Work session started.");
+    }
+);
+
+// ---------- ACTION 8: VAULT CLEANUP ----------
+
+createButton(
+    "⌁",
+    "VAULT CLEANUP",
+    "Maintain your workspace",
+    async () => {
+        await openBase(CONFIG.cleanupBase);
+    }
+);
+```
+
 ```dataviewjs
 
 (async () => {
@@ -1098,3 +1460,4 @@ if (projects.length === 0) {
 
 root.appendChild(card);
 ```
+
