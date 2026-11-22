@@ -346,6 +346,16 @@ const CONFIG = {
 const container = dv.container;
 container.innerHTML = "";
 
+// Khung bọc + lưới chứa các nút (CSS dùng 2 class này để chia cột)
+const wrap = document.createElement("div");
+wrap.className = "cc-action-wrap";
+
+const grid = document.createElement("div");
+grid.className = "cc-action-grid";
+
+wrap.appendChild(grid);
+container.appendChild(wrap);
+
 const moment = window.moment;
 const today = moment().format("YYYY-MM-DD");
 const week = moment().format("GGGG-[W]WW");
@@ -403,7 +413,7 @@ function createButton(icon, title, description, action) {
         }
     });
 
-    container.appendChild(button);
+    grid.appendChild(button);
 }
 
 // ---------- ACTION 1: PLAN TODAY ----------

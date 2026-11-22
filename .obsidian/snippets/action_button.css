@@ -88,34 +88,32 @@
     pointer-events: none;
 }
 
-/* 4 COLUMNS - 2 ROWS */
+/* 4 CỘT x 2 HÀNG; khung hẹp thì còn 2 cột */
 
-.dataview:has(.cc-action-button) {
+.cc-action-wrap {
+    container-type: inline-size;   /* đo theo bề rộng khung chứa, không phải cả cửa sổ */
+    width: 100%;
+}
+
+.cc-action-grid {
+    --cc-columns: 4;
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(var(--cc-columns), minmax(0, 1fr));
     gap: 8px;
     width: 100%;
 }
 
-/* Mobile: giữ 4 cột nếu đủ không gian */
-@media (max-width: 600px) {
-    .dataview:has(.cc-action-button) {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 5px;
+@container (max-width: 600px) {
+    .cc-action-grid {
+        --cc-columns: 2;
+        gap: 6px;
     }
 
     .cc-action-button {
-        padding: 9px 7px;
-        min-height: 68px;
+        padding: 10px;
+        min-height: 72px;
     }
 
-    .cc-action-title {
-        font-size: 8px;
-        letter-spacing: 0.5px;
-    }
-
-    .cc-action-desc {
-        font-size: 7px;
-    }
+    .cc-action-title { font-size: 9px; }
+    .cc-action-desc  { font-size: 8px; }
 }
