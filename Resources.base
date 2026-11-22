@@ -23,6 +23,9 @@ views:
     filters:
       and:
         - file.folder == "03_Resources"
+    order:
+      - file.name
+      - tags
     cardSize: 150
   - type: cards
     name: 04 - Archived
