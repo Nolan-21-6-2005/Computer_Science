@@ -14,6 +14,8 @@ views:
     filters:
       and:
         - file.folder == "02_Areas"
+    order:
+      - file.name
     indentProperties: false
     cardSize: 150
   - type: cards
