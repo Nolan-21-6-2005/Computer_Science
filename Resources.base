@@ -16,6 +16,8 @@ views:
         - file.folder == "02_Areas"
     order:
       - file.name
+      - file.backlinks
+      - file.basename
     indentProperties: false
     cardSize: 150
   - type: cards
