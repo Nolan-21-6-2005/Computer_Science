@@ -220,8 +220,10 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ff48ffcb913d29a3",
+  "active": "57d7fac175f48926",
   "lastOpenFiles": [
+    "01 Daily Notes/2026-11-22.md",
+    "01 Daily Notes",
     "Resources.base",
     "03_Resources/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
     "02_Areas/Course/Lesson-01.md.md",
@@ -263,7 +265,6 @@
     "Attachments",
     "04_Archives/EduWatch.md",
     "04_Archives",
-    "03_Resources/Excalidraw/Libraries/local-library.excalidrawlib",
-    "03_Resources/Excalidraw/Libraries"
+    "03_Resources/Excalidraw/Libraries/local-library.excalidrawlib"
   ]
 }
