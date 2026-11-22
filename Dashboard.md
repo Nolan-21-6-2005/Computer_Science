@@ -198,32 +198,86 @@ function createButton(icon, title, desc, action) {
     grid.appendChild(b);
 }
 
-// 1. PLAN TODAY
-createButton("◷", "PLAN TODAY", "Create daily plan", () =>
-    openOrCreate(`${CFG.folders.daily}/${today}.md`, `---
-type: daily
-date: ${today}
-status: planned
----
+// 1. PLAN TODAY — tạo todo list cho khối Daily Tasks
+function askTasks(initial) {
+    return new Promise(resolve => {
+        const overlay = document.createElement("div");
+        overlay.className = "plan-overlay";
+        overlay.style.cssText = "position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.6)";
+        overlay.innerHTML = `
+            <div class="plan-box" style="width:min(520px,92vw);padding:16px;background:var(--background-primary);border:1px solid var(--background-modifier-border);border-radius:0">
+                <div class="plan-title" style="margin-bottom:8px;font-weight:600">Today's tasks</div>
+                <div class="plan-hint" style="margin-bottom:8px;color:var(--text-muted);font-size:.85em">One task per line. Unfinished tasks are carried over.</div>
+                <textarea class="plan-input" rows="10" style="width:100%;resize:vertical;border-radius:0"></textarea>
+                <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:12px">
+                    <button class="plan-cancel" style="border-radius:0">Cancel</button>
+                    <button class="plan-create mod-cta" style="border-radius:0">Create list</button>
+                </div>
+            </div>`;
+        const input = overlay.querySelector(".plan-input");
+        input.value = initial;
 
-# Daily Plan
+        const close = value => {
+            overlay.remove();
+            document.removeEventListener("keydown", onKey, true);
+            resolve(value);
+        };
+        const onKey = e => {
+            if (e.key === "Escape") { e.stopPropagation(); close(null); }
+            if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) close(input.value);
+        };
+        document.addEventListener("keydown", onKey, true);
+        overlay.querySelector(".plan-cancel").onclick = () => close(null);
+        overlay.querySelector(".plan-create").onclick = () => close(input.value);
+        overlay.addEventListener("mousedown", e => { if (e.target === overlay) close(null); });
 
-## Objectives
-- [ ]
+        document.body.appendChild(overlay);
+        input.focus();
+    });
+}
 
-## Tasks
-- [ ]
+createButton("◷", "PLAN TODAY", "Create today's todo list", async () => {
+    const path = CFG.files.dailyTasks;
+    const file = app.vault.getAbstractFileByPath(path);
+    const old = file ? await app.vault.read(file) : "";
 
-## Schedule
+    const rowRe = /^\s*[-*+]\s*\[([ xX])\]\s*(.+?)\s*$/;
+    const prev = old.split("\n").map(l => l.match(rowRe)).filter(Boolean)
+        .map(m => ({ done: m[1] !== " ", text: m[2] }));
+    const prevDate = old.match(/^date:\s*(\d{4}-\d{2}-\d{2})/m)?.[1];
+    const samePlan = prevDate === today;
 
-## Reflection
+    // Cùng ngày: giữ lại toàn bộ danh sách. Ngày mới: chỉ chuyển sang việc chưa xong.
+    const initial = (samePlan ? prev : prev.filter(t => !t.done)).map(t => t.text).join("\n");
+    const raw = await askTasks(initial);
+    if (raw === null) return;
 
-### Completed
+    const tasks = raw.split("\n")
+        .map(s => s.replace(/^\s*(?:[-*+]\s*(?:\[[ xX]\]\s*)?)?/, "").trim())
+        .filter(Boolean);
+    if (!tasks.length) return new Notice("No tasks entered.");
 
-### Not Completed
+    // Lưu danh sách của ngày trước vào daily note của ngày đó
+    if (prev.length && prevDate && !samePlan) {
+        await ensureFolder(CFG.folders.daily);
+        const notePath = `${CFG.folders.daily}/${prevDate}.md`;
+        const block = `\n## Daily Tasks\n${prev.map(t => `- [${t.done ? "x" : " "}] ${t.text}`).join("\n")}\n`;
+        const note = app.vault.getAbstractFileByPath(notePath);
+        if (note) await app.vault.process(note, c => c.replace(/\s*$/, "\n") + block);
+        else await app.vault.create(notePath, `---\ntype: daily\ndate: ${prevDate}\n---\n${block}`);
+    }
 
-### Notes
-`));
+    const doneBefore = new Set(samePlan ? prev.filter(t => t.done).map(t => t.text) : []);
+    const content = `---\ndate: ${today}\n---\n# Daily Tasks\n` +
+        tasks.map(t => `- [${doneBefore.has(t) ? "x" : " "}] ${t}`).join("\n") + "\n";
+
+    if (file) await app.vault.modify(file, content);
+    else {
+        await ensureFolder(path.substring(0, path.lastIndexOf("/")));
+        await app.vault.create(path, content);
+    }
+    new Notice(`Daily Tasks: ${tasks.length} tasks created.`);
+});
 
 // 2. CAPTURE IDEA
 createButton("✳", "CAPTURE IDEA", "Save a new idea", () =>
@@ -460,7 +514,7 @@ function cardHeader(title, icon, countText) {
 
 function scheduleCard() {
     const card = el("section", "workspace-card schedule-card");
-    const { header } = cardHeader("SCHEDULE", "◷", `${scheduleEvents.length} EVENTS`);
+    const { header } = cardHeader("FIXED SCHEDULE", "◷", `${scheduleEvents.length} BLOCKS`);
     const grid = el("div", "schedule-grid");
 
     if (!scheduleEvents.length) {
@@ -473,8 +527,17 @@ function scheduleCard() {
         const right = el("div", "schedule-column");
         const mid = Math.ceil(scheduleEvents.length / 2);
 
+        const clock = new Date();
+        const nowMin = clock.getHours() * 60 + clock.getMinutes();
+        const toM = t => Number(t.slice(0, 2)) * 60 + Number(t.slice(3));
+        const nextIdx = scheduleEvents.findIndex(e => toM(e.time) > nowMin);
+        const nowIdx = (nextIdx === -1 ? scheduleEvents.length : nextIdx) - 1;
+
         scheduleEvents.forEach((ev, i) => {
             const row = el("div", "schedule-event");
+            if (i < nowIdx) row.classList.add("is-past");
+            else if (i === nowIdx) row.classList.add("is-now");
+            else if (i === nextIdx) row.classList.add("is-next");
             row.append(el("span", "schedule-time", ev.time), el("span", "schedule-title", ev.title));
             (i < mid ? left : right).appendChild(row);
         });

@@ -1,0 +1,82 @@
+/* workspace-checkbox.css
+   Put in: <vault>/.obsidian/snippets/  then enable in Settings > Appearance > CSS snippets.
+   Square, sharp-cornered checkboxes for Daily Tasks + state styling for the fixed schedule. */
+
+/* ---------- Daily Tasks checkbox ---------- */
+.workspace-task .workspace-checkbox {
+    --box-size: 18px;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    flex: 0 0 var(--box-size);
+    width: var(--box-size);
+    height: var(--box-size);
+    margin: 0;
+    background: transparent;
+    border: 1.5px solid var(--text-muted);
+    border-radius: 0 !important;
+    box-shadow: none;
+    cursor: pointer;
+    transition: border-color 0.12s ease, background-color 0.12s ease;
+}
+
+/* remove Obsidian's built-in check mark so only ours shows */
+.workspace-task .workspace-checkbox::after {
+    content: none !important;
+}
+
+.workspace-task .workspace-checkbox:hover {
+    border-color: var(--interactive-accent);
+}
+
+.workspace-task .workspace-checkbox:checked {
+    background: var(--interactive-accent);
+    border-color: var(--interactive-accent);
+}
+
+.workspace-task .workspace-checkbox:checked::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: 5px;
+    height: 10px;
+    border: solid var(--background-primary);
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.workspace-task .workspace-checkbox:focus-visible {
+    outline: 2px solid var(--interactive-accent);
+    outline-offset: 2px;
+}
+
+.workspace-task .workspace-checkbox:disabled {
+    opacity: 0.6;
+    cursor: progress;
+}
+
+/* ---------- Fixed schedule states ---------- */
+.schedule-event.is-past {
+    opacity: 0.4;
+}
+
+.schedule-event.is-now {
+    box-shadow: inset 2px 0 0 var(--interactive-accent);
+}
+
+.schedule-event.is-now .schedule-time,
+.schedule-event.is-now .schedule-title {
+    color: var(--interactive-accent);
+}
+
+.schedule-event.is-next .schedule-time {
+    color: var(--text-normal);
+}
+
+/* ---------- Plan Today dialog ---------- */
+.plan-box,
+.plan-box textarea,
+.plan-box button {
+    border-radius: 0;
+}

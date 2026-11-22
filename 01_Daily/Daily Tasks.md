@@ -1,7 +1,7 @@
+---
+date: 2026-11-23
+---
 # Daily Tasks
-- [ ] Skool post
-- [ ] Inbox triage
-- [ ] Skool consolidation pass
-- [ ] YouTube recording
-- [ ] Daily review
-- [ ] Prep live-stream rundown + thumbnail
+- [ ] Lam bai tren leetcode
+- [ ] Thu thap du lieu hinh anh
+- [ ] tim hieu ve cach van hanh cua thuat toan ML

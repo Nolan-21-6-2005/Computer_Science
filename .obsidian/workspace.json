@@ -15,7 +15,7 @@
               "state": {
                 "file": "Dashboard.md",
                 "mode": "preview",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Dashboard"
@@ -103,8 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 255.89999389648438,
-    "collapsed": true
+    "width": 255.89999389648438
   },
   "right": {
     "id": "4156926ec12609c0",
@@ -227,16 +226,22 @@
   },
   "active": "bc751eebe7d08fbd",
   "lastOpenFiles": [
-    "99_System/Bases/Inbox.base",
+    "01_Daily/Daily Schedule.md",
     "Dashboard.md",
+    "99_System/Bases/Inbox.base",
+    "05_Reviews/Weekly/2026-W48.md",
+    "99_System/Snippets/New Project Button.md",
+    "01 Daily Notes/2026-11-22.md",
+    "01 Daily Notes",
+    "00 Inbox/Ideas/2026-11-22-21-39-57.md",
+    "00 Inbox/Ideas",
+    "00 Inbox",
     "99_System/Excalidraw/Computer Memory.excalidraw.md",
     "04_Logs/Sessions/2026-11-23_00-54_deep_work.md",
     "02_Projects/EduWatch.md",
     "99_System/Excalidraw/Transformer.excalidraw.md",
     "99_System/Snippets/dataviewjs clickable button.md",
-    "99_System/Snippets/New Project Button.md",
     "99_System/Excalidraw/Derivative.excalidraw.md",
-    "05_Reviews/Weekly/2026-W48.md",
     "05_Reviews/Weekly/2026-W47.md",
     "05_Reviews/Weekly",
     "05_Reviews",
@@ -255,14 +260,8 @@
     "03_Learning/Notes/Tools/Streamlit.md",
     "03_Learning/Notes/General/Góp ý 11-11-2026.md",
     "03_Learning/Notes/Computer_Vision/Sự thay đổi của feature map sau các lớp tích chập.md",
-    "03_Learning/Notes/Computer_Vision/Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào.md",
-    "03_Learning/Notes/Computer_Vision/Cách neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
     "03_Learning/Notes/Tools",
     "03_Learning/Notes/Machine_Learning",
-    "03_Learning/Notes/General",
-    "03_Learning/Notes/Computer_Vision",
-    "03_Learning/Courses/Computer_Vision",
-    "03_Learning/Notes",
     "99_System/Attachments/clustering.jpg",
     "99_System/Attachments/thuat-toan-phan-cum.jpg",
     "99_System/Attachments/rgb.jpg",

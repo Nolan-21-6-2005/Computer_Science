@@ -7,7 +7,9 @@
     "project_deadline",
     "workspace",
     "youtube_playlist",
-    "action_button"
+    "action_button",
+    "workspace-checkbox"
   ],
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "accentColor": "#ce7227"
 }
