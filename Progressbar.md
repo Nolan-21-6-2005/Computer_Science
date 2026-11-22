@@ -330,14 +330,25 @@ if (kpis.length === 0) {
 ```
 
 ```dataviewjs
+async function openBase(path) {
+    const file = app.vault.getAbstractFileByPath(path);
+
+    if (!file) {
+        new Notice(`Base file not found: ${path}`);
+        return;
+    }
+
+    await app.workspace.getLeaf(false).openFile(file);
+}
+
 const CONFIG = {
     dailyFolder: "01 Daily Notes",
     ideaFolder: "00 Inbox/Ideas",
-    learningFolder: "02 Learning",
-    projectOverview: "03 Projects/Projects Overview.md",
-    inboxNote: "00 Inbox/Inbox.md",
+    learningFolder: "02_Areas/Course",
+    projectBase: "Attachments/ProjectsOverview.base",
+    inboxBase: "Attachments/Inboxs.base",
     weeklyFolder: "06 Reviews/Weekly",
-    cleanupNote: "06 Reviews/Vault Cleanup.md",
+    cleanupBase: "Attachments/VaultCleanup.base",
     sessionFolder: "05 Tasks/Work Sessions",
 };
 
@@ -345,6 +356,16 @@ const CONFIG = {
 
 const container = dv.container;
 container.innerHTML = "";
+
+// Khung bọc + lưới chứa các nút (CSS dùng 2 class này để chia cột)
+const wrap = document.createElement("div");
+wrap.className = "cc-action-wrap";
+
+const grid = document.createElement("div");
+grid.className = "cc-action-grid";
+
+wrap.appendChild(grid);
+container.appendChild(wrap);
 
 const moment = window.moment;
 const today = moment().format("YYYY-MM-DD");
@@ -403,7 +424,7 @@ function createButton(icon, title, description, action) {
         }
     });
 
-    container.appendChild(button);
+    grid.appendChild(button);
 }
 
 // ---------- ACTION 1: PLAN TODAY ----------
@@ -515,24 +536,10 @@ createButton(
     "PROJECT REVIEW",
     "Review active projects",
     async () => {
-        const template = `---
-type: project-dashboard
----
-
-# Project Overview
-
-## Active Projects
-
-## Progress
-
-## Blockers
-
-## Next Actions
-`;
-
-        await openOrCreate(CONFIG.projectOverview, template);
+        await openBase(CONFIG.projectBase);
     }
 );
+
 
 // ---------- ACTION 5: WEEKLY REVIEW ----------
 
@@ -596,20 +603,10 @@ createButton(
     "INBOX PROCESSING",
     "Process unorganized notes",
     async () => {
-        const template = `---
-type: inbox
----
-
-# Inbox
-
-## Unprocessed Notes
-
-## To Organize
-`;
-
-        await openOrCreate(CONFIG.inboxNote, template);
+        await openBase(CONFIG.inboxBase);
     }
 );
+
 
 // ---------- ACTION 7: DEEP WORK ----------
 
@@ -687,30 +684,7 @@ createButton(
     "VAULT CLEANUP",
     "Maintain your workspace",
     async () => {
-        const template = `---
-type: maintenance
----
-
-# Vault Cleanup
-
-## Inbox
-- [ ] Process unorganized notes
-
-## Projects
-- [ ] Check project properties
-- [ ] Archive completed projects
-
-## Learning
-- [ ] Check lesson status
-- [ ] Update learning progress
-
-## General
-- [ ] Check broken links
-- [ ] Remove unused attachments
-- [ ] Review tags and properties
-`;
-
-        await openOrCreate(CONFIG.cleanupNote, template);
+        await openBase(CONFIG.cleanupBase);
     }
 );
 ```
@@ -1486,3 +1460,4 @@ if (projects.length === 0) {
 
 root.appendChild(card);
 ```
+

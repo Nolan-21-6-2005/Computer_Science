@@ -6,7 +6,8 @@
     "progressbar",
     "project_deadline",
     "workspace",
-    "youtube_playlist"
+    "youtube_playlist",
+    "action_button"
   ],
   "theme": "obsidian"
 }
