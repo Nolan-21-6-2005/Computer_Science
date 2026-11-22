@@ -118,8 +118,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -197,6 +196,16 @@
               "icon": "timer",
               "title": "Time Tracker"
             }
+          },
+          {
+            "id": "9cce8e1195c722c3",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Timeline"
+            }
           }
         ],
         "currentTab": 3
@@ -256,7 +265,7 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "2ac6a53cc1f4ef1b",
+  "active": "d94a58c907abf8fa",
   "lastOpenFiles": [
     "Resources.base",
     "Projects/EduWatch.md",
