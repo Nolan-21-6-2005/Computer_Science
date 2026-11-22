@@ -25,13 +25,14 @@
             "id": "ff48ffcb913d29a3",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "01_Projects/ProjectsOverview.base",
-                "viewName": "View"
+                "file": "01_Projects/Graph Neural Network x Problem Solving by Search.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-grid",
-              "title": "ProjectsOverview"
+              "icon": "lucide-file",
+              "title": "Graph Neural Network x Problem Solving by Search"
             }
           },
           {
@@ -230,9 +231,15 @@
   },
   "active": "ff48ffcb913d29a3",
   "lastOpenFiles": [
-    "Progressbar.md",
     "01_Projects/ProjectsOverview.base",
+    "01_Projects/Graph Neural Network x Problem Solving by Search.md",
+    "01_Projects/Life OS - Obsidian.md",
+    "01_Projects/EduWatch.md",
+    "01_Projects/Dust Collector.md",
     "03_Resources/Convolution Neural Networks.md",
+    "01_Projects/Untitled.md",
+    "01_Projects/Untitled 1.md",
+    "Progressbar.md",
     "03 Projects/Projects Overview.base",
     "00 Inbox/Inbox.md",
     "00 Inbox",
@@ -252,7 +259,6 @@
     "03_Resources/Machine learning - thuật toán học.md",
     "02_Areas/Untitled.md",
     "02_Areas/Untitled 1.md",
-    "01_Projects/Untitled.md",
     "00_Inboxs/Thuật toán toán phân cụm hoạt động như thế nào với ảnh màu RGB.md",
     "00_Inboxs/Attachments/clustering_rgb.jpg",
     "00_Inboxs/Attachments/rgb.jpg",
@@ -266,11 +272,6 @@
     "Excalidraw/Drawing 2026-11-20 09.34.41.excalidraw.md",
     "Attachments/convSobel-1639002689.gif",
     "Attachments/CNN.jpg",
-    "03_Resources/dataviewjs clickable button.md",
-    "03_Resources/Sự thay đổi của feature map sau các lớp tích chập.md",
-    "03_Resources/Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào.md",
-    "03_Resources/Habit tracker.md",
-    "03_Resources/Cách tính Gini Index cho từng ngưỡng.md",
     "Attachments/Pasted image 20261112075541.png",
     "Attachments/decision_tree_regression.png"
   ]

@@ -1,3 +1,13 @@
 views:
   - type: cards
     name: View
+    filters:
+      and:
+        - file.folder == "01_Projects"
+    order:
+      - file.name
+      - deadline
+      - start_date
+      - type
+      - status
+      - priority
