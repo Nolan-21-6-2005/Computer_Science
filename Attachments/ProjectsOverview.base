@@ -1,5 +1,5 @@
 views:
-  - type: cards
+  - type: table
     name: View
     filters:
       and:
@@ -11,3 +11,7 @@ views:
       - type
       - status
       - priority
+    columnSize:
+      file.name: 325
+      note.status: 70
+      note.priority: 186

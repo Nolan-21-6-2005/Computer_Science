@@ -1521,8 +1521,8 @@ const CONFIG = {
     dailyFolder: "01 Daily Notes",
     ideaFolder: "00 Inbox/Ideas",
     learningFolder: "02_Area/Learning",
-    projectBase: "01_Projects/ProjectsOverview.base",
-    inboxNote: "00 Inbox/Inbox.base",
+    projectBase: "Attachments/ProjectsOverview.base",
+    inboxBase: "00 Inbox/Inbox.base",
     weeklyFolder: "06 Reviews/Weekly",
     cleanupNote: "06 Reviews/Vault Cleanup.base",
     sessionFolder: "05 Tasks/Work Sessions",
@@ -1779,20 +1779,10 @@ createButton(
     "INBOX PROCESSING",
     "Process unorganized notes",
     async () => {
-        const template = `---
-type: inbox
----
-
-# Inbox
-
-## Unprocessed Notes
-
-## To Organize
-`;
-
-        await openOrCreate(CONFIG.inboxNote, template);
+        await openBase(CONFIG.inboxBase);
     }
 );
+
 
 // ---------- ACTION 7: DEEP WORK ----------
 
