@@ -11,16 +11,31 @@
             "id": "bc751eebe7d08fbd",
             "type": "leaf",
             "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_Resources/Convolution Neural Networks.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Convolution Neural Networks"
+            }
+          },
+          {
+            "id": "ff48ffcb913d29a3",
+            "type": "leaf",
+            "state": {
               "type": "bases",
               "state": {
                 "file": "Resources.base",
-                "viewName": "02 - Areas"
+                "viewName": "03 - Resources"
               },
               "icon": "lucide-layout-grid",
               "title": "Resources"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -54,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"deadline\"]",
+                "query": "[\"course\"]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -204,39 +219,39 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "c8963e357b1b6ec4",
+  "active": "ff48ffcb913d29a3",
   "lastOpenFiles": [
-    "02_Areas/Untitled 1.md",
-    "02_Areas/Untitled.md",
-    "02_Areas/Góp ý 11-11-2026.md",
-    "02_Areas/Project manager.base",
+    "03_Resources/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
     "Resources.base",
-    "03_Resources/Machine learning - thuật toán học.md",
-    "01_Projects/Untitled.md",
-    "03_Resources/Sự thay đổi của feature map sau các lớp tích chập.md",
-    "Progressbar.md",
+    "02_Areas/Course/Lesson-01.md.md",
     "03_Resources/Machine learning - Nhận dataset.md",
+    "03_Resources/Machine learning - thuật toán học.md",
+    "02_Areas/Untitled.md",
+    "02_Areas/Untitled 1.md",
+    "01_Projects/Untitled.md",
+    "00_Inboxs/Thuật toán toán phân cụm hoạt động như thế nào với ảnh màu RGB.md",
+    "03_Resources/Convolution Neural Networks.md",
+    "00_Inboxs/Attachments/clustering_rgb.jpg",
+    "00_Inboxs/Attachments/rgb.jpg",
+    "00_Inboxs/Ứng dụng của thuật toán phân cụm trong thị giác máy tính.md",
+    "00_Inboxs/Attachments/clustering.jpg",
+    "00_Inboxs/Attachments",
     "03_Resources/Clustering.md",
     "03_Resources/Attachments/thuat-toan-phan-cum.jpg",
     "03_Resources/Attachments",
-    "00_Inboxs/Ứng dụng của thuật toán phân cụm trong thị giác máy tính.md",
-    "00_Inboxs/Thuật toán toán phân cụm hoạt động như thế nào với ảnh màu RGB.md",
-    "00_Inboxs/Attachments/rgb.jpg",
-    "00_Inboxs/Attachments/clustering_rgb.jpg",
-    "00_Inboxs/Attachments/clustering.jpg",
-    "00_Inboxs/Attachments",
+    "02_Areas/Góp ý 11-11-2026.md",
+    "Progressbar.md",
     "conflict-files-obsidian-git.md",
     "Excalidraw/Drawing 2026-11-20 09.34.41.excalidraw.md",
     "Attachments/convSobel-1639002689.gif",
     "Attachments/CNN.jpg",
     "03_Resources/dataviewjs clickable button.md",
+    "03_Resources/Sự thay đổi của feature map sau các lớp tích chập.md",
     "03_Resources/Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào.md",
     "03_Resources/Habit tracker.md",
     "03_Resources/Cách tính Gini Index cho từng ngưỡng.md",
     "03_Resources/Cách neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
     "03_Resources/Cách mạng neuron tích chập hoạt động.md",
-    "03_Resources/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
-    "03_Resources/Convolution Neural Networks.md",
     "Habit tracker.md",
     "Excalidraw/Libraries/local-library.excalidrawlib",
     "Excalidraw/Libraries",
@@ -248,7 +263,6 @@
     "04_Archives/EduWatch.md",
     "04_Archives",
     "03_Resources/Excalidraw/Libraries/local-library.excalidrawlib",
-    "03_Resources/Excalidraw/Computer Memory.excalidraw.md",
-    "03_Resources/Excalidraw/Transformer.excalidraw.md"
+    "03_Resources/Excalidraw/Libraries"
   ]
 }
