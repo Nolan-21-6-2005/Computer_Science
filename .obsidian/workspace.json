@@ -220,9 +220,11 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "57d7fac175f48926",
+  "active": "ff48ffcb913d29a3",
   "lastOpenFiles": [
     "01 Daily Notes/2026-11-22.md",
+    "Progressbar.md",
+    "03_Resources/Convolution Neural Networks.md",
     "01 Daily Notes",
     "Resources.base",
     "03_Resources/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
@@ -233,7 +235,6 @@
     "02_Areas/Untitled 1.md",
     "01_Projects/Untitled.md",
     "00_Inboxs/Thuật toán toán phân cụm hoạt động như thế nào với ảnh màu RGB.md",
-    "03_Resources/Convolution Neural Networks.md",
     "00_Inboxs/Attachments/clustering_rgb.jpg",
     "00_Inboxs/Attachments/rgb.jpg",
     "00_Inboxs/Ứng dụng của thuật toán phân cụm trong thị giác máy tính.md",
@@ -243,7 +244,6 @@
     "03_Resources/Attachments/thuat-toan-phan-cum.jpg",
     "03_Resources/Attachments",
     "02_Areas/Góp ý 11-11-2026.md",
-    "Progressbar.md",
     "conflict-files-obsidian-git.md",
     "Excalidraw/Drawing 2026-11-20 09.34.41.excalidraw.md",
     "Attachments/convSobel-1639002689.gif",
