@@ -25,13 +25,14 @@
             "id": "ff48ffcb913d29a3",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Resources.base",
-                "viewName": "03 - Resources"
+                "file": "Progressbar.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-layout-grid",
-              "title": "Resources"
+              "icon": "lucide-file",
+              "title": "Progressbar"
             }
           }
         ],
@@ -94,7 +95,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -221,8 +222,8 @@
   },
   "active": "ff48ffcb913d29a3",
   "lastOpenFiles": [
-    "03_Resources/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
     "Resources.base",
+    "03_Resources/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
     "02_Areas/Course/Lesson-01.md.md",
     "03_Resources/Machine learning - Nhận dataset.md",
     "03_Resources/Machine learning - thuật toán học.md",
