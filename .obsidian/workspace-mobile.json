@@ -41,13 +41,14 @@
             "id": "a905cbe6ecc0f1fd",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Resources.base",
-                "viewName": "03 - Resources"
+                "file": "Progressbar.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-grid",
-              "title": "Resources"
+              "icon": "lucide-file",
+              "title": "Progressbar"
             }
           }
         ],
@@ -157,7 +158,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Resources.base",
+            "file": "Progressbar.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -215,8 +216,9 @@
   },
   "active": "a905cbe6ecc0f1fd",
   "lastOpenFiles": [
-    "Progressbar.md",
+    "03_Resources/Cách mạng neuron tích chập hoạt động.md",
     "Resources.base",
+    "Progressbar.md",
     "03_Resources/Habit tracker.md",
     "03_Resources/dataviewjs clickable button.md",
     "03_Resources/Sự thay đổi của feature map sau các lớp tích chập.md",
