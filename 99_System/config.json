@@ -1,0 +1,28 @@
+{
+  "folders": {
+    "ideas": "00_Inbox/Ideas",
+    "daily": "01_Daily/Notes",
+    "projects": "02_Projects",
+    "courses": "03_Learning/Courses",
+    "sessions": "04_Logs/Sessions",
+    "weekly": "05_Reviews/Weekly",
+    "bases": "99_System/Bases"
+  },
+  "files": {
+    "schedule": "01_Daily/Daily Schedule.md",
+    "dailyTasks": "01_Daily/Daily Tasks.md",
+    "activeSession": "04_Logs/Sessions/Active Session.md"
+  },
+  "bases": {
+    "projects": "99_System/Bases/ProjectsOverview.base",
+    "inbox": "99_System/Bases/Inbox.base",
+    "cleanup": "99_System/Bases/VaultCleanup.base"
+  },
+  "patterns": {
+    "lesson": "^Lesson-\\d+$"
+  },
+  "types": {
+    "session": "work_session",
+    "project": "project"
+  }
+}
