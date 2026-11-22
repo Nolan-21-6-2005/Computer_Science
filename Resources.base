@@ -1,0 +1,27 @@
+views:
+  - type: kanban
+    name: 01 - Projects
+    filters:
+      and:
+        - file.folder == "01_Projects"
+    groupBy:
+      property: file.tags
+      direction: DESC
+    groupOrder: []
+    imageFit: contain
+  - type: cards
+    name: 02 - Areas
+    filters:
+      and:
+        - file.folder == "02_Areas"
+    indentProperties: false
+    cardSize: 150
+  - type: cards
+    name: 03 - Resources
+    filters:
+      and:
+        - file.folder == "03_Resources"
+    cardSize: 150
+  - type: cards
+    name: 04 - Archived
+    cardSize: 150

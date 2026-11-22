@@ -28,21 +28,30 @@
             "id": "935be365215c230e",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "bases",
               "state": {
-                "file": "Mathematics.canvas",
-                "viewState": {
-                  "x": 196.54573562357675,
-                  "y": -1422.395687902754,
-                  "zoom": -1.2809935302447721
-                }
+                "file": "Resources.base",
+                "viewName": "01 - Projects"
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Mathematics"
+              "icon": "lucide-kanban-square",
+              "title": "Resources"
+            }
+          },
+          {
+            "id": "a905cbe6ecc0f1fd",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Resources.base",
+                "viewName": "03 - Resources"
+              },
+              "icon": "lucide-layout-grid",
+              "title": "Resources"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -136,7 +145,7 @@
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 4
   },
   "right": {
     "id": "c5efa7a22861fd02",
@@ -148,7 +157,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Data Structure & Algorithms.md",
+            "file": "Resources.base",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -200,12 +209,27 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "notebook-navigator:Notebook Navigator": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "935be365215c230e",
+  "active": "a905cbe6ecc0f1fd",
   "lastOpenFiles": [
+    "Progressbar.md",
+    "Resources.base",
+    "03_Resources/Habit tracker.md",
+    "03_Resources/dataviewjs clickable button.md",
+    "03_Resources/Sự thay đổi của feature map sau các lớp tích chập.md",
+    "03_Resources/Yêu cầu.md",
+    "03_Resources/Clustering.md",
+    "03_Resources/Machine learning - Nhận dataset.md",
+    "03_Resources/Streamlit.md",
+    "03_Resources/Machine learning - thuật toán học.md",
+    "01_Projects/Untitled.md",
+    "04_Archives/EduWatch.md",
+    "01_Projects/Dust Collector.md",
+    "01_Projects/EduWatch.md",
+    "02_Areas/Course/Lesson-01.md.md",
     "Excalidraw/Derivative.excalidraw.md",
     "Mathematics.canvas",
     "Giá trị số của máy tính.md",
@@ -232,11 +256,6 @@
     "Excalidraw/Libraries/local-library.excalidrawlib",
     "Excalidraw/Libraries",
     "Caculus/Logarithms - hàm ngược của số mũ.md",
-    "Caculus/Kernel (Linear Algebra).md",
-    "Linear Algebra/Ma trận.md",
-    "README.md",
-    "Journaling",
-    "Caculus/Đạo hàm.md",
-    "Machine Learning/Algorithms/Clustering.md"
+    "Journaling"
   ]
 }
