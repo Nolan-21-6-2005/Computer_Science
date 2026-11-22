@@ -344,7 +344,7 @@ async function openBase(path) {
 const CONFIG = {
     dailyFolder: "01 Daily Notes",
     ideaFolder: "00 Inbox/Ideas",
-    learningFolder: "02_Areas/Learning",
+    learningFolder: "02_Areas/Course",
     projectBase: "Attachments/ProjectsOverview.base",
     inboxBase: "Attachments/Inboxs.base",
     weeklyFolder: "06 Reviews/Weekly",
