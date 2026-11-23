@@ -11,10 +11,14 @@
             "id": "bc751eebe7d08fbd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Dashboard.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Dashboard"
             }
           }
         ]
@@ -200,8 +204,9 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "57d7fac175f48926",
+  "active": "bc751eebe7d08fbd",
   "lastOpenFiles": [
+    "Progressbar.md",
     "03_Learning/Notes/Tools/Streamlit.md",
     "03_Learning/Notes/General/Góp ý 11-11-2026.md",
     "03_Learning/Notes/Machine_Learning/Machine learning - thuật toán học.md",
@@ -237,7 +242,6 @@
     "01_Daily/Daily Schedule.md",
     "01 Daily Notes/2026-11-22.md",
     "99_System/Snippets/dataviewjs clickable button.md",
-    "99_System/Snippets/New Project Button.md",
     "99_System/Attachments/thuat-toan-phan-cum.jpg",
     "99_System/Attachments/rgb.jpg",
     "99_System/Attachments/Pasted image 20261112075541.png",
