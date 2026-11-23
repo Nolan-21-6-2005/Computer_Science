@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dashboard.md",
-                "mode": "preview",
+                "file": "00_Inbox/Ideas/2026-11-23-15-53-46.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dashboard"
+              "title": "2026-11-23-15-53-46"
             }
           }
         ]
@@ -206,6 +206,11 @@
   },
   "active": "bc751eebe7d08fbd",
   "lastOpenFiles": [
+    "Dashboard.md",
+    "00_Inbox/Ideas/2026-11-23-15-53-46.md",
+    "99_System/Bases/Inbox.base",
+    "00_Inbox/Untitled.md",
+    "99_System/Bases/ProjectsOverview.base",
     "Progressbar.md",
     "03_Learning/Notes/Tools/Streamlit.md",
     "03_Learning/Notes/General/Góp ý 11-11-2026.md",
@@ -232,16 +237,11 @@
     "02_Projects/Graph Neural Network x Problem Solving by Search.md",
     "02_Projects/EduWatch.md",
     "02_Projects/Dust Collector.md",
-    "02_Projects",
     "01_Daily/Notes/2026-11-23.md",
     "01_Daily/Notes/2026-11-22.md",
     "01_Daily/Notes/2026-11-01.md",
-    "01_Daily/Notes",
     "01_Daily/Habit Tracker.md",
     "01_Daily/Daily Tasks.md",
-    "01_Daily/Daily Schedule.md",
-    "01 Daily Notes/2026-11-22.md",
-    "99_System/Snippets/dataviewjs clickable button.md",
     "99_System/Attachments/thuat-toan-phan-cum.jpg",
     "99_System/Attachments/rgb.jpg",
     "99_System/Attachments/Pasted image 20261112075541.png",
