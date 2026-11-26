@@ -28,3 +28,5 @@ views:
       - end
       - duration_minutes
     cardSize: 240
+  - type: table
+    name: View

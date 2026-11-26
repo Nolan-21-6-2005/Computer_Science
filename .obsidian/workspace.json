@@ -25,10 +25,13 @@
             "id": "c6306850c8ebb92e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "bases",
+              "state": {
+                "file": "99_System/Bases/ProjectsOverview.base",
+                "viewName": "View"
+              },
+              "icon": "lucide-table",
+              "title": "ProjectsOverview"
             }
           },
           {
@@ -41,7 +44,8 @@
               "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -99,7 +103,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -224,10 +229,10 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "bc751eebe7d08fbd",
+  "active": "c6306850c8ebb92e",
   "lastOpenFiles": [
-    "01_Daily/Daily Schedule.md",
     "Dashboard.md",
+    "01_Daily/Daily Schedule.md",
     "99_System/Bases/Inbox.base",
     "05_Reviews/Weekly/2026-W48.md",
     "99_System/Snippets/New Project Button.md",
