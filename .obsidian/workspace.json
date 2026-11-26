@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_Inbox/Ideas/2026-11-23-15-53-46.md",
-                "mode": "source",
+                "file": "Dashboard.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-11-23-15-53-46"
+              "title": "Dashboard"
+            }
+          },
+          {
+            "id": "4da55bb4385f9f9a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -79,7 +89,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -206,11 +217,15 @@
   },
   "active": "bc751eebe7d08fbd",
   "lastOpenFiles": [
-    "Dashboard.md",
-    "00_Inbox/Ideas/2026-11-23-15-53-46.md",
-    "99_System/Bases/Inbox.base",
-    "00_Inbox/Untitled.md",
     "99_System/Bases/ProjectsOverview.base",
+    "Dashboard.md",
+    "03_Learning/Courses/Computer_Vision/Lesson-01.md",
+    "04_Logs/Sessions/2026-11-18_08-00_experiment.md",
+    "04_Logs/Sessions/2026-11-18_08-00_research_review.md",
+    "00_Inbox/Ideas/2026-11-26-09-57-34.md",
+    "99_System/Bases/Inbox.base",
+    "00_Inbox/Ideas/2026-11-23-15-53-46.md",
+    "00_Inbox/Untitled.md",
     "Progressbar.md",
     "03_Learning/Notes/Tools/Streamlit.md",
     "03_Learning/Notes/General/Góp ý 11-11-2026.md",
@@ -224,7 +239,6 @@
     "03_Learning/Notes/Computer_Vision/Cách neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
     "03_Learning/Notes/Computer_Vision/Cách mạng neuron tích chập hoạt động.md",
     "03_Learning/Notes/Computer_Vision/Convolution Neural Networks.md",
-    "03_Learning/Courses/Computer_Vision/Lesson-01.md",
     "03_Learning/Notes/Tools",
     "03_Learning/Notes/General",
     "03_Learning/Notes/Machine_Learning",
@@ -238,10 +252,6 @@
     "02_Projects/EduWatch.md",
     "02_Projects/Dust Collector.md",
     "01_Daily/Notes/2026-11-23.md",
-    "01_Daily/Notes/2026-11-22.md",
-    "01_Daily/Notes/2026-11-01.md",
-    "01_Daily/Habit Tracker.md",
-    "01_Daily/Daily Tasks.md",
     "99_System/Attachments/thuat-toan-phan-cum.jpg",
     "99_System/Attachments/rgb.jpg",
     "99_System/Attachments/Pasted image 20261112075541.png",
