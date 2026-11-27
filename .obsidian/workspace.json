@@ -8,27 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bc751eebe7d08fbd",
+            "id": "4da55bb4385f9f9a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Logs/Sessions/2026-11-18_08-00_research_review.md",
+                "file": "conflict-files-obsidian-git.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-11-18_08-00_research_review"
-            }
-          },
-          {
-            "id": "4da55bb4385f9f9a",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "conflict-files-obsidian-git"
             }
           }
         ]
@@ -214,43 +204,44 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "d94a58c907abf8fa",
+  "active": "4da55bb4385f9f9a",
   "lastOpenFiles": [
+    "04_Logs/Sessions/2026-11-18_08-00_research_review.md",
+    "conflict-files-obsidian-git.md",
+    "06_Archives/To_Review/EduWatch (planning copy).md",
+    "06_Archives/To_Review",
+    "06_Archives/Dashboard.md",
+    "06_Archives",
+    "04_Resources/Machine_Learning/Machine learning - thuật toán học.md",
+    "04_Resources/Tools/Streamlit.md",
+    "04_Resources/Machine_Learning/Machine learning - Nhận dataset.md",
+    "04_Resources/Machine_Learning/Cách tính Gini Index cho từng ngưỡng.md",
+    "04_Resources/Machine_Learning/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
+    "04_Resources/Machine_Learning/Clustering.md",
+    "04_Resources/Computer_Vision/Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào.md",
+    "04_Resources/General/Góp ý 11-11-2026.md",
+    "04_Resources/Computer_Vision/Sự thay đổi của feature map sau các lớp tích chập.md",
+    "04_Resources/Computer_Vision/Cách neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
+    "04_Resources/Computer_Vision/Cách mạng neuron tích chập hoạt động.md",
+    "04_Resources/Computer_Vision/Convolution Neural Networks.md",
+    "04_Resources/Tools",
+    "04_Resources/Machine_Learning",
+    "04_Resources/General",
+    "04_Resources/Computer_Vision",
+    "04_Resources",
+    "03_Areas/Daily Notes/2026-11-27-12-34.md",
+    "03_Areas/Daily Notes/2026-11-22.md",
+    "03_Areas/Daily Notes",
+    "03_Areas",
     "99_System/Bases/ProjectsOverview.base",
     "Dashboard.md",
-    "99_System/Bases/Inbox.base",
-    "04_Logs/Sessions/2026-11-18_08-00_research_review.md",
     "04_Logs/Sessions/2026-11-18_08-00_experiment.md",
     "04_Logs/Sessions/2026-11-26_09-59_deep_work.md",
-    "99_System/Bases/VaultCleanup.base",
     "03_Learning/Courses/Computer_Vision/Lesson-01.md",
     "00_Inbox/Ideas/2026-11-26-09-57-34.md",
     "00_Inbox/Ideas/2026-11-23-15-53-46.md",
     "00_Inbox/Untitled.md",
     "Progressbar.md",
-    "03_Learning/Notes/Tools/Streamlit.md",
-    "03_Learning/Notes/General/Góp ý 11-11-2026.md",
-    "03_Learning/Notes/Machine_Learning/Machine learning - thuật toán học.md",
-    "03_Learning/Notes/Machine_Learning/Machine learning - Nhận dataset.md",
-    "03_Learning/Notes/Machine_Learning/Cách tính Gini Index cho từng ngưỡng.md",
-    "03_Learning/Notes/Machine_Learning/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
-    "03_Learning/Notes/Machine_Learning/Clustering.md",
-    "03_Learning/Notes/Computer_Vision/Sự thay đổi của feature map sau các lớp tích chập.md",
-    "03_Learning/Notes/Computer_Vision/Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào.md",
-    "03_Learning/Notes/Computer_Vision/Cách neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
-    "03_Learning/Notes/Computer_Vision/Cách mạng neuron tích chập hoạt động.md",
-    "03_Learning/Notes/Computer_Vision/Convolution Neural Networks.md",
-    "03_Learning/Notes/Tools",
-    "03_Learning/Notes/General",
-    "03_Learning/Notes/Machine_Learning",
-    "03_Learning/Notes/Computer_Vision",
-    "03_Learning/Courses/Computer_Vision",
-    "03_Learning/Notes",
-    "03_Learning/Courses",
-    "02_Projects/Life OS - Obsidian.md",
-    "02_Projects/Graph Neural Network x Problem Solving by Search.md",
-    "02_Projects/EduWatch.md",
-    "02_Projects/Dust Collector.md",
     "99_System/Attachments/thuat-toan-phan-cum.jpg",
     "99_System/Attachments/rgb.jpg",
     "99_System/Attachments/Pasted image 20261112075541.png",

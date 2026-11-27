@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Daily Note
+    filters:
+      and:
+        - file.folder == "03_Areas/Daily Notes"
+  - type: table
+    name: View 2
+    filters:
+      and:
+        - file.folder == "03_Areas/Daily Notes"
