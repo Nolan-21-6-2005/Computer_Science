@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dashboard.md",
-                "mode": "preview",
-                "source": false
+                "file": "04_Logs/Sessions/2026-11-18_08-00_research_review.md",
+                "mode": "source",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Dashboard"
+              "title": "2026-11-18_08-00_research_review"
             }
           },
           {
@@ -89,8 +89,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -215,16 +214,16 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "bc751eebe7d08fbd",
+  "active": "d94a58c907abf8fa",
   "lastOpenFiles": [
-    "04_Logs/Sessions/2026-11-26_09-59_deep_work.md",
     "99_System/Bases/ProjectsOverview.base",
     "Dashboard.md",
-    "99_System/Bases/VaultCleanup.base",
     "99_System/Bases/Inbox.base",
-    "03_Learning/Courses/Computer_Vision/Lesson-01.md",
-    "04_Logs/Sessions/2026-11-18_08-00_experiment.md",
     "04_Logs/Sessions/2026-11-18_08-00_research_review.md",
+    "04_Logs/Sessions/2026-11-18_08-00_experiment.md",
+    "04_Logs/Sessions/2026-11-26_09-59_deep_work.md",
+    "99_System/Bases/VaultCleanup.base",
+    "03_Learning/Courses/Computer_Vision/Lesson-01.md",
     "00_Inbox/Ideas/2026-11-26-09-57-34.md",
     "00_Inbox/Ideas/2026-11-23-15-53-46.md",
     "00_Inbox/Untitled.md",
@@ -252,7 +251,6 @@
     "02_Projects/Graph Neural Network x Problem Solving by Search.md",
     "02_Projects/EduWatch.md",
     "02_Projects/Dust Collector.md",
-    "01_Daily/Notes/2026-11-23.md",
     "99_System/Attachments/thuat-toan-phan-cum.jpg",
     "99_System/Attachments/rgb.jpg",
     "99_System/Attachments/Pasted image 20261112075541.png",
