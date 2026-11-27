@@ -13,11 +13,11 @@
             "state": {
               "type": "bases",
               "state": {
-                "file": "99_System/Bases/Areas.base",
-                "viewName": "Daily Note"
+                "file": "99_System/Bases/Resources.base",
+                "viewName": "Computer Vision"
               },
               "icon": "lucide-table",
-              "title": "Areas"
+              "title": "Resources"
             }
           }
         ]
@@ -222,8 +222,22 @@
   },
   "active": "ef652a97c76636ff",
   "lastOpenFiles": [
-    "file:C:/Users/hanh/SecondBrain/Computer-Sciences/.trash/Ma trận.md",
     "99_System/Bases/Areas.base",
+    "99_System/Bases/Archives.base",
+    "99_System/Bases/Resources.base",
+    "99_System/Bases/ProjectsOverview.base",
+    "99_System/Bases/Inbox.base",
+    "04_Logs/Sessions/2026-11-26_09-59_deep_work.md",
+    "04_Logs/Sessions",
+    "04_Logs",
+    "00_Inbox/Ideas/2026-11-26-09-57-34.md",
+    "00_Inbox/Ideas/2026-11-23-15-53-46.md",
+    "00_Inbox/Ideas/2026-11-23-01-00-53.md",
+    "00_Inbox/Ideas/2026-11-23-01-00-16.md",
+    "00_Inbox/Ideas/2026-11-23-00-58-59.md",
+    "00_Inbox/Ideas/2026-11-22-21-39-57.md",
+    "00_Inbox/Ideas",
+    "file:C:/Users/hanh/SecondBrain/Computer-Sciences/.trash/Ma trận.md",
     "file:C:/Users/hanh/SecondBrain/Computer-Sciences/.trash/Kernel (Linear Algebra).md",
     "file:C:/Users/hanh/SecondBrain/Computer-Sciences/.trash/00 Inbox/Inbox.md",
     "file:C:/Users/hanh/SecondBrain/Computer-Sciences/.trash/00 Inbox 3/Ideas/2026-11-22-21-39-57.md",
@@ -244,20 +258,6 @@
     "03_Learning/Notes/Tools",
     "03_Learning/Notes/Machine_Learning",
     "03_Learning/Notes/General",
-    "03_Learning/Notes/Computer_Vision",
-    "03_Learning/Courses/Computer_Vision",
-    "03_Learning/Notes",
-    "03_Learning/Courses",
-    "03_Learning",
-    "01_Daily/Notes/2026-11-23.md",
-    "01_Daily/Notes/2026-11-22.md",
-    "01_Daily/Notes/2026-11-01.md",
-    "01_Daily/Notes",
-    "01_Daily/Habit Tracker.md",
-    "01_Daily/Daily Tasks.md",
-    "01_Daily/Daily Schedule.md",
-    "01 Daily Notes/2026-11-22.md",
-    "00_Inbox/Ideas/2026-11-23-00-50-05.md",
     "99_System/Attachments/clustering_rgb.jpg",
     "99_System/Attachments/clustering.jpg",
     "99_System/Attachments/thuat-toan-phan-cum.jpg",
