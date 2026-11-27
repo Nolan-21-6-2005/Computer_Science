@@ -14,8 +14,39 @@
     },
     {
       "type": "file",
-      "ctime": 1795370000130,
-      "path": "Dashboard.md"
+      "ctime": 1795713714284,
+      "path": "99_System/Bases/Inbox.base",
+      "title": "Inbox"
+    },
+    {
+      "type": "file",
+      "ctime": 1795713670445,
+      "path": "99_System/Bases/ProjectsOverview.base",
+      "title": "Projects"
+    },
+    {
+      "type": "file",
+      "ctime": 1795716321058,
+      "path": "99_System/Bases/Daily Note.base",
+      "title": "Areas"
+    },
+    {
+      "type": "file",
+      "ctime": 1795716703430,
+      "path": "99_System/Bases/Resources.base",
+      "title": "Resources"
+    },
+    {
+      "type": "file",
+      "ctime": 1795717264371,
+      "path": "99_System/Bases/Areas.base",
+      "title": "Areas"
+    },
+    {
+      "type": "file",
+      "ctime": 1795717269939,
+      "path": "99_System/Bases/Archives.base",
+      "title": "Archives"
     }
   ]
 }

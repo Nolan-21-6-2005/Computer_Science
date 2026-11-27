@@ -8,44 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bc751eebe7d08fbd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Dashboard.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Dashboard"
-            }
-          },
-          {
-            "id": "c6306850c8ebb92e",
+            "id": "ef652a97c76636ff",
             "type": "leaf",
             "state": {
               "type": "bases",
               "state": {
-                "file": "99_System/Bases/ProjectsOverview.base",
-                "viewName": "View"
+                "file": "99_System/Bases/Areas.base",
+                "viewName": "Daily Note"
               },
               "icon": "lucide-table",
-              "title": "ProjectsOverview"
-            }
-          },
-          {
-            "id": "2ac6a53cc1f4ef1b",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Areas"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -105,10 +80,26 @@
           }
         ],
         "currentTab": 2
+      },
+      {
+        "id": "8aa689d946afe54b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f325f88d0829c063",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 255.89999389648438
+    "width": 302.5
   },
   "right": {
     "id": "4156926ec12609c0",
@@ -214,7 +205,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 281.5
+    "width": 316.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -229,44 +220,45 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "c6306850c8ebb92e",
+  "active": "ef652a97c76636ff",
   "lastOpenFiles": [
-    "Dashboard.md",
-    "01_Daily/Daily Schedule.md",
-    "99_System/Bases/Inbox.base",
-    "05_Reviews/Weekly/2026-W48.md",
-    "99_System/Snippets/New Project Button.md",
-    "01 Daily Notes/2026-11-22.md",
-    "01 Daily Notes",
-    "00 Inbox/Ideas/2026-11-22-21-39-57.md",
-    "00 Inbox/Ideas",
-    "00 Inbox",
-    "99_System/Excalidraw/Computer Memory.excalidraw.md",
-    "04_Logs/Sessions/2026-11-23_00-54_deep_work.md",
-    "02_Projects/EduWatch.md",
-    "99_System/Excalidraw/Transformer.excalidraw.md",
-    "99_System/Snippets/dataviewjs clickable button.md",
-    "99_System/Excalidraw/Derivative.excalidraw.md",
-    "05_Reviews/Weekly/2026-W47.md",
-    "05_Reviews/Weekly",
-    "05_Reviews",
-    "04_Logs/Sessions/2026-11-22_20-40_deep_work.md",
-    "04_Logs/Sessions/2026-11-22_18-38_deep_work.md",
-    "04_Logs/Sessions/2026-11-18_08-00_research_review.md",
-    "04_Logs/Sessions/2026-11-18_08-00_experiment.md",
-    "04_Logs/Sessions/2026-11-18_08-00_deep_work.md",
-    "04_Logs/Sessions",
-    "04_Logs",
+    "file:C:/Users/hanh/SecondBrain/Computer-Sciences/.trash/Ma trận.md",
+    "99_System/Bases/Areas.base",
+    "file:C:/Users/hanh/SecondBrain/Computer-Sciences/.trash/Kernel (Linear Algebra).md",
+    "file:C:/Users/hanh/SecondBrain/Computer-Sciences/.trash/00 Inbox/Inbox.md",
+    "file:C:/Users/hanh/SecondBrain/Computer-Sciences/.trash/00 Inbox 3/Ideas/2026-11-22-21-39-57.md",
+    "file:C:/Users/hanh/SecondBrain/Computer-Sciences/.trash/00 Inbox 2/Ideas/2026-11-22-20-20-30.md",
+    "03_Learning/Notes/Tools/Streamlit.md",
     "03_Learning/Notes/Machine_Learning/Machine learning - thuật toán học.md",
     "03_Learning/Notes/Machine_Learning/Machine learning - Nhận dataset.md",
     "03_Learning/Notes/Machine_Learning/Cách tính Gini Index cho từng ngưỡng.md",
     "03_Learning/Notes/Machine_Learning/Cách decision tree xác định sau khi đã chọn được nhánh cần phân chia.md",
     "03_Learning/Notes/Machine_Learning/Clustering.md",
-    "03_Learning/Notes/Tools/Streamlit.md",
     "03_Learning/Notes/General/Góp ý 11-11-2026.md",
     "03_Learning/Notes/Computer_Vision/Sự thay đổi của feature map sau các lớp tích chập.md",
+    "03_Learning/Notes/Computer_Vision/Mạng neural tích chập nhận dữ liệu ảnh đầu vào như thế nào.md",
+    "03_Learning/Notes/Computer_Vision/Cách neural network biết được nó cần nhận biết các đặc trưng gì của ảnh.md",
+    "03_Learning/Notes/Computer_Vision/Cách mạng neuron tích chập hoạt động.md",
+    "03_Learning/Notes/Computer_Vision/Convolution Neural Networks.md",
+    "03_Learning/Courses/Computer_Vision/Lesson-01.md",
     "03_Learning/Notes/Tools",
     "03_Learning/Notes/Machine_Learning",
+    "03_Learning/Notes/General",
+    "03_Learning/Notes/Computer_Vision",
+    "03_Learning/Courses/Computer_Vision",
+    "03_Learning/Notes",
+    "03_Learning/Courses",
+    "03_Learning",
+    "01_Daily/Notes/2026-11-23.md",
+    "01_Daily/Notes/2026-11-22.md",
+    "01_Daily/Notes/2026-11-01.md",
+    "01_Daily/Notes",
+    "01_Daily/Habit Tracker.md",
+    "01_Daily/Daily Tasks.md",
+    "01_Daily/Daily Schedule.md",
+    "01 Daily Notes/2026-11-22.md",
+    "00_Inbox/Ideas/2026-11-23-00-50-05.md",
+    "99_System/Attachments/clustering_rgb.jpg",
     "99_System/Attachments/clustering.jpg",
     "99_System/Attachments/thuat-toan-phan-cum.jpg",
     "99_System/Attachments/rgb.jpg",
@@ -274,7 +266,6 @@
     "99_System/Attachments/decision_tree_regression.png",
     "99_System/Attachments/convSobel-1639002689.gif",
     "99_System/Attachments/CNN.jpg",
-    "99_System/Attachments/clustering_rgb.jpg",
     "03_Resources/Attachments/thuat-toan-phan-cum.jpg",
     "00_Inboxs/Attachments/rgb.jpg"
   ]

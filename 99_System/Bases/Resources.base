@@ -1,0 +1,11 @@
+views:
+  - type: table
+    name: Computer Vision
+    filters:
+      and:
+        - file.folder == "04_Resources/Computer_Vision"
+  - type: table
+    name: Machine Learning
+    filters:
+      and:
+        - file.folder == "04_Resources/Machine_Learning"
